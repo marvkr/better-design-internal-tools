@@ -1,5 +1,5 @@
 export const formFieldBase =
-  "w-full rounded-md px-3 text-base sm:text-sm " +
+  "w-full rounded-md px-3 text-base lg:text-sm " +
   "bg-card text-foreground " +
   "border border-border " +
   "placeholder:text-muted-foreground " +
@@ -9,5 +9,5 @@ export const formFieldBase =
   "focus-visible:outline-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/25 " +
   "disabled:cursor-not-allowed disabled:opacity-50";
 
-export const formFieldSingleLine = "flex h-11 py-2 sm:h-9 sm:py-1.5";
+export const formFieldSingleLine = "flex h-11 py-2 lg:h-9 lg:py-1.5";
 export const formFieldMultiLine = "flex min-h-[80px] py-2 resize-y";
