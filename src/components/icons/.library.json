@@ -1,0 +1,7 @@
+{
+  "library": "feather",
+  "prefix": "feather",
+  "source": "iconify",
+  "installedAt": "2026-08-19T11:32:47.453Z",
+  "icons": ["arrow-left", "arrow-right", "check-circle", "file-text", "home", "inbox", "users"]
+}
