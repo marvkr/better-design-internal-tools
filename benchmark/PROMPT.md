@@ -13,4 +13,4 @@ Requirements:
 
 The benchmark runner appends the selected flow's `name`, `audience`, `job`, and
 step definitions to this prompt. The before and after sessions receive the same
-result. Only the after session receives Better Design MCP access.
+completed prompt. Only the after session receives Better Design MCP access.

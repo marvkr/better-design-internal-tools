@@ -18,6 +18,7 @@ const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
     return (
       <div className="relative w-full">
         <select
+          aria-invalid={error || undefined}
           ref={ref}
           className={cn(
             formFieldBase,

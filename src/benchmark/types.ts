@@ -26,6 +26,7 @@ export type BenchmarkFlow = {
   audience: string;
   job: string;
   nav: string[];
+  activeNav: string;
   stats: Array<{ label: string; value: string }>;
   records: FlowRecord[];
   fields: FlowField[];

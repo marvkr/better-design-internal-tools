@@ -11,6 +11,7 @@ describe("benchmark flow contract", () => {
     expect(flow.steps).toHaveLength(4);
     expect(flow.fields.length).toBeGreaterThanOrEqual(3);
     expect(flow.records.length).toBeGreaterThanOrEqual(3);
+    expect(flow.nav).toContain(flow.activeNav);
     expect(flow.job.endsWith(".")).toBe(true);
   });
 });

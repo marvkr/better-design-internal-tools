@@ -9,6 +9,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Product and engineering teams",
     job: "Capture a customer problem, assign an owner, and place it in the next work cycle.",
     nav: ["Inbox", "Issues", "Cycles", "Projects"],
+    activeNav: "Issues",
     stats: [{ label: "Open", value: "24" }, { label: "Unassigned", value: "7" }, { label: "Due this week", value: "5" }],
     records: [
       { title: "Export omits archived rows", detail: "Data export", meta: "Updated 12 min ago", status: "Urgent" },
@@ -36,6 +37,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Finance and account teams",
     job: "Create an accurate customer invoice and schedule it for delivery.",
     nav: ["Overview", "Invoices", "Customers", "Reports"],
+    activeNav: "Invoices",
     stats: [{ label: "Outstanding", value: "$48,240" }, { label: "Due soon", value: "8" }, { label: "Overdue", value: "3" }],
     records: [
       { title: "Northwind Studio", detail: "INV-2048", meta: "$8,400 · Due 28 Aug", status: "Draft" },
@@ -63,6 +65,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Sales operations teams",
     job: "Create a follow-up workflow that keeps qualified opportunities moving.",
     nav: ["Companies", "People", "Deals", "Workflows"],
+    activeNav: "Workflows",
     stats: [{ label: "Active deals", value: "38" }, { label: "Needs follow-up", value: "11" }, { label: "Pipeline", value: "$284k" }],
     records: [
       { title: "Acme Works", detail: "Expansion · $32k", meta: "No activity for 4 days", status: "Follow up" },
@@ -90,6 +93,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Customer support teams",
     job: "Find an urgent customer conversation, assign it, and send a clear response.",
     nav: ["Inbox", "Tickets", "Customers", "Knowledge"],
+    activeNav: "Inbox",
     stats: [{ label: "Unassigned", value: "18" }, { label: "Waiting", value: "12" }, { label: "SLA risk", value: "4" }],
     records: [
       { title: "Cannot export August report", detail: "Ari from Mono", meta: "Waiting 18 min", status: "SLA risk" },
@@ -117,6 +121,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Recruiting and people teams",
     job: "Schedule a panel interview across several calendars without double-booking anyone.",
     nav: ["Events", "Availability", "Teams", "Analytics"],
+    activeNav: "Events",
     stats: [{ label: "Interviews this week", value: "14" }, { label: "Needs scheduling", value: "6" }, { label: "Conflicts", value: "2" }],
     records: [
       { title: "Product designer panel", detail: "Jamie Park", meta: "4 interviewers", status: "Needs time" },
@@ -144,6 +149,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Lifecycle marketing teams",
     job: "Draft, review, and schedule a product update newsletter.",
     nav: ["Overview", "Posts", "Audience", "Automations"],
+    activeNav: "Posts",
     stats: [{ label: "Subscribers", value: "24,860" }, { label: "Avg. open rate", value: "48%" }, { label: "Drafts", value: "3" }],
     records: [
       { title: "August product update", detail: "Product news", meta: "Edited 8 min ago", status: "Draft" },
@@ -171,6 +177,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Software teams",
     job: "Import a repository, configure the build, and deploy it to production.",
     nav: ["Projects", "Deployments", "Domains", "Activity"],
+    activeNav: "Deployments",
     stats: [{ label: "Projects", value: "12" }, { label: "Deployments today", value: "28" }, { label: "Failed", value: "1" }],
     records: [
       { title: "customer-portal", detail: "main · a19fd2c", meta: "Ready · 6 min ago", status: "Production" },
@@ -198,6 +205,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Operations and service teams",
     job: "Create and publish an internal request form with clear ownership.",
     nav: ["Forms", "Responses", "Workspaces", "Settings"],
+    activeNav: "Forms",
     stats: [{ label: "Active forms", value: "8" }, { label: "Responses this week", value: "146" }, { label: "Needs review", value: "19" }],
     records: [
       { title: "Creative request", detail: "Marketing", meta: "42 responses", status: "Active" },
@@ -225,6 +233,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Operations teams",
     job: "Connect a trigger and action, test the data, and publish the automation.",
     nav: ["Automations", "Runs", "Connections", "Templates"],
+    activeNav: "Automations",
     stats: [{ label: "Active", value: "17" }, { label: "Runs today", value: "1,284" }, { label: "Errors", value: "6" }],
     records: [
       { title: "New lead → CRM", detail: "Web form to Northstar", meta: "428 runs this week", status: "Active" },
@@ -252,6 +261,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Product and growth teams",
     job: "Build and save a conversion funnel for a key activation journey.",
     nav: ["Home", "Charts", "Dashboards", "Data"],
+    activeNav: "Charts",
     stats: [{ label: "Activation", value: "38.4%" }, { label: "Weekly users", value: "18.2k" }, { label: "Tracked events", value: "64" }],
     records: [
       { title: "Workspace activation", detail: "4-step funnel", meta: "Updated today", status: "38.4%" },
@@ -279,6 +289,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Legal and people teams",
     job: "Review an agreement, place required fields, and send it for signature.",
     nav: ["Agreements", "Templates", "Contacts", "Reports"],
+    activeNav: "Agreements",
     stats: [{ label: "Awaiting signature", value: "9" }, { label: "Completed this month", value: "32" }, { label: "Expiring", value: "4" }],
     records: [
       { title: "Design contractor agreement", detail: "Jamie Park", meta: "Prepared 18 Aug", status: "Draft" },
@@ -306,6 +317,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "People and hiring teams",
     job: "Collect a new employee's details and prepare their first-week setup.",
     nav: ["People", "Onboarding", "Time off", "Documents"],
+    activeNav: "Onboarding",
     stats: [{ label: "Starting soon", value: "6" }, { label: "Needs action", value: "4" }, { label: "Complete", value: "18" }],
     records: [
       { title: "Jamie Park", detail: "Product Designer", meta: "Starts 2 Sep", status: "Needs documents" },
@@ -333,6 +345,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Finance and support teams",
     job: "Review an order and issue a documented partial refund.",
     nav: ["Orders", "Customers", "Refunds", "Reports"],
+    activeNav: "Orders",
     stats: [{ label: "Orders today", value: "184" }, { label: "Refund requests", value: "12" }, { label: "Refunded this week", value: "$4,820" }],
     records: [
       { title: "Order #8421", detail: "Nora Bennett", meta: "$184.00 · 3 items", status: "Refund requested" },
@@ -360,6 +373,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Cross-functional teams",
     job: "Create a recurring request workflow that gathers approvals in one place.",
     nav: ["Home", "Channels", "Workflows", "Activity"],
+    activeNav: "Workflows",
     stats: [{ label: "Active workflows", value: "12" }, { label: "Runs this week", value: "286" }, { label: "Waiting approval", value: "8" }],
     records: [
       { title: "Campaign approval", detail: "Marketing operations", meta: "42 runs this month", status: "Active" },
@@ -387,6 +401,7 @@ export const flows: BenchmarkFlow[] = [
     audience: "Operations and enablement teams",
     job: "Turn a working document into a searchable internal policy page.",
     nav: ["Home", "Drafts", "Published", "Collections"],
+    activeNav: "Drafts",
     stats: [{ label: "Published pages", value: "128" }, { label: "Drafts", value: "16" }, { label: "Needs review", value: "7" }],
     records: [
       { title: "Expense policy", detail: "Finance handbook", meta: "Edited 14 min ago", status: "Needs review" },

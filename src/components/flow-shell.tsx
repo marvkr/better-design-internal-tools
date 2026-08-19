@@ -43,7 +43,7 @@ function SidebarNav({ flow }: FlowShellProps) {
     <nav aria-label={`${flow.product} navigation`} className="grid gap-1">
       {flow.nav.map((item, index) => {
         const Icon = navIcons[index] ?? HomeIcon;
-        const isCurrent = index === 1;
+        const isCurrent = item === flow.activeNav;
         return (
           <span
             aria-current={isCurrent ? "page" : undefined}
