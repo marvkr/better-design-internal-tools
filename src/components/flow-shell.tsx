@@ -126,7 +126,7 @@ function PageHeader({ step }: { step: BenchmarkFlow["steps"][number] }) {
         <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl">{step.title}</h1>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">{step.description}</p>
       </div>
-      <Button asChild className="hidden sm:inline-flex" variant="outline"><Link href="/">All flows</Link></Button>
+      <Button asChild className="hidden lg:inline-flex" variant="outline"><Link href="/">All flows</Link></Button>
     </header>
   );
 }

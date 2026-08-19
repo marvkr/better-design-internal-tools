@@ -57,7 +57,7 @@ body {
   font-family: var(--font-sans);
 }
 
-button, input, select, textarea { font: inherit; }
+button, input, select, textarea { font-family: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
   outline: 3px solid oklch(0.72 0.15 258 / 0.45);
