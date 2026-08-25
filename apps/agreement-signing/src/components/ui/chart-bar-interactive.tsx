@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./card"
+import { Button } from "./button"
 import {
   ChartContainer,
   ChartTooltip,
@@ -152,10 +153,12 @@ export function ChartBarInteractive() {
           {["desktop", "mobile"].map((key) => {
             const chart = key as keyof typeof chartConfig
             return (
-              <button
+              <Button
+                type="button"
+                variant="ghost"
                 key={chart}
                 data-active={activeChart === chart}
-                className="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-t-0 sm:border-l sm:px-8 sm:py-6"
+                className="relative z-30 h-auto flex-1 flex-col items-start justify-center gap-1 rounded-none border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-t-0 sm:border-l sm:px-8 sm:py-6"
                 onClick={() => setActiveChart(chart)}
               >
                 <span className="text-xs text-muted-foreground">
@@ -164,7 +167,7 @@ export function ChartBarInteractive() {
                 <span className="text-lg leading-none font-bold sm:text-3xl">
                   {total[key as keyof typeof total].toLocaleString()}
                 </span>
-              </button>
+              </Button>
             )
           })}
         </div>

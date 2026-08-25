@@ -2,6 +2,7 @@
 
 import * as React from "react";
 
+import { Button, type ButtonProps } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 /*
@@ -32,7 +33,7 @@ const ButtonGroup = React.forwardRef<HTMLDivElement, ButtonGroupProps>(
 ButtonGroup.displayName = "ButtonGroup";
 
 export interface ButtonGroupItemProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends ButtonProps {
   active?: boolean;
 }
 
@@ -40,12 +41,13 @@ const ButtonGroupItem = React.forwardRef<
   HTMLButtonElement,
   ButtonGroupItemProps
 >(({ className, active, ...props }, ref) => (
-  <button
+  <Button
     ref={ref}
     type="button"
+    variant="ghost"
     aria-pressed={active}
     className={cn(
-      "inline-flex h-10 items-center justify-center gap-2 px-4 text-[13px] font-medium leading-[20px]",
+      "h-10 rounded-none px-4 text-[13px] leading-[20px]",
       "text-foreground",
       "transition-[background-color,color,box-shadow] duration-150",
       "hover:bg-secondary",
