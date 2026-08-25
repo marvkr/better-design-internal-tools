@@ -1,0 +1,1 @@
+import type { IconProps } from "./shared"; import { IconBase } from "./shared"; export function ClipboardCheckIcon(p: IconProps) { return <IconBase {...p}><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1m-7 9 2 2 4-4"/></IconBase>; }

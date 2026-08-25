@@ -1,0 +1,10 @@
+{
+  "generatedProjectId": "61c69b62-da4d-4e8c-924d-bbfee1749668",
+  "assignmentSource": "generated registry metadata",
+  "library": "Iconoir",
+  "provider": "iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-left", "arrow-right", "check", "group", "home-simple", "nav-arrow-down", "nav-arrow-up", "page", "plus", "refresh-double", "reports"],
+  "manifestFile": "src/components/icons/.library.json",
+  "componentFiles": ["src/components/icons/arrow-left.tsx", "src/components/icons/arrow-right.tsx", "src/components/icons/check.tsx", "src/components/icons/group.tsx", "src/components/icons/home-simple.tsx", "src/components/icons/nav-arrow-down.tsx", "src/components/icons/nav-arrow-up.tsx", "src/components/icons/page.tsx", "src/components/icons/plus.tsx", "src/components/icons/refresh-double.tsx", "src/components/icons/reports.tsx", "src/components/icons/index.ts"]
+}

@@ -1,0 +1,1 @@
+import type { IconProps } from "./shared"; import { IconBase } from "./shared"; export function HomeIcon(p: IconProps) { return <IconBase {...p}><path d="m2 8 10-5 10 5v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z"/></IconBase>; }

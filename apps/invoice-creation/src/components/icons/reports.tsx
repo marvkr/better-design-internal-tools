@@ -1,0 +1,2 @@
+import type { SVGProps } from "react";
+export function ReportsIcon(props: SVGProps<SVGSVGElement>) { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d="M9 21v-5m0 5H4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h5m6 5V9m0 12h5a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-5a1 1 0 0 0-1 1v5m0 0H10a1 1 0 0 0-1 1v5" /></svg>; }

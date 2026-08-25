@@ -1,0 +1,7 @@
+{
+  "baseSelection": { "firstRankedId": "atelier", "name": "Atelier", "rank": 1, "url": "https://better-design.com/design-systems/atelier" },
+  "generatedProject": { "projectId": "61c69b62-da4d-4e8c-924d-bbfee1749668", "projectUrl": "https://better-design.com/projects/61c69b62-da4d-4e8c-924d-bbfee1749668", "previewUrl": "https://better-design.com/preview/4c868c8c-c3da-4738-9aea-d2f7b7386028" },
+  "registry": { "url": "https://better-design.com/api/projects/61c69b62-da4d-4e8c-924d-bbfee1749668/registry/all.json", "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/61c69b62-da4d-4e8c-924d-bbfee1749668/registry/all.json", "iconLibraryAssignment": { "library": "Iconoir", "provider": "iconify", "prefix": "iconoir", "variant": "default" } },
+  "mcpOperations": ["get-ui-principle", "get-ux-principle", "find-design-system", "create-design-system", "get-design-system-status", "generated registry install", "get-review-rules", "check-comprehension"],
+  "installedFiles": ["src/app/globals.css", "src/components/ui/", "src/components/icons/", "src/lib/better-design-guards.ts"]
+}

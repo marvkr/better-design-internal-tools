@@ -1,0 +1,13 @@
+{
+  "generatedProjectId": "70f0f814-a756-4712-8ff3-ddb287646106",
+  "projectId": "70f0f814-a756-4712-8ff3-ddb287646106",
+  "assignmentSource": "generated Better Design status",
+  "library": "Iconoir",
+  "libraryId": "iconoir",
+  "prefix": "iconoir",
+  "provider": "iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-left", "book", "check", "group", "menu", "message", "nav-arrow-down", "nav-arrow-right"],
+  "manifest": "src/components/icons/.library.json",
+  "componentFiles": ["src/components/icons/arrow-left.tsx", "src/components/icons/book.tsx", "src/components/icons/check.tsx", "src/components/icons/group.tsx", "src/components/icons/menu.tsx", "src/components/icons/message.tsx", "src/components/icons/nav-arrow-down.tsx", "src/components/icons/nav-arrow-right.tsx", "src/components/icons/index.ts"]
+}

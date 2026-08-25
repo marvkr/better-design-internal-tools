@@ -1,0 +1,13 @@
+{
+  "receipt": "Employee onboarding implementation",
+  "commands": [
+    { "command": "yes | npx shadcn@latest add https://better-design.com/api/projects/d1f47d85-83df-4ab8-9b65-699b45cab4d2/registry/all.json --yes", "outcome": "passed; generated registry installed" },
+    { "command": "bun run typecheck", "outcome": "passed" },
+    { "command": "bun run lint", "outcome": "passed" },
+    { "command": "bun test", "outcome": "no tests found; Bun exits non-zero because the repository has no test files" },
+    { "command": "bun run build", "outcome": "passed; production build completed" }
+  ],
+  "filesChanged": ["src/app/page.tsx", "src/app/globals.css", "src/app/layout.tsx", "src/components/icons/*", "src/components/ui/* (generated registry)", "src/.better-design/*", "components.json", "eslint.config.mjs", "tsconfig.json", "package.json", "bun.lock", "benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json"],
+  "toolLimitations": ["Connected Chrome integration was unavailable, so real-browser workflow verification was not run.", "inspect-spacing first capture call returned needs-capture; no browser was available to evaluate the returned script, so the required completed measurement at 1440, 1728, and 390 widths is incomplete."],
+  "sessionSettings": { "host": "codex", "cliVersion": "0.149.0", "model": "gpt-5.6-luna", "permissionMode": "dangerously-bypass-approvals-and-sandbox", "history": "ephemeral", "outputFormat": "jsonl", "timeBudgetSeconds": 3600, "mcpTreatment": "better-design HTTP MCP only; Apps/plugins disabled" }
+}

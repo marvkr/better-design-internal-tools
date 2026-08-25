@@ -1,0 +1,107 @@
+{
+  "slug": "support-inbox",
+  "name": "Support inbox triage",
+  "product": "Harbor",
+  "category": "Customer operations",
+  "audience": "Customer support teams",
+  "job": "Find an urgent customer conversation, assign it, and send a clear response.",
+  "nav": [
+    "Inbox",
+    "Tickets",
+    "Customers",
+    "Knowledge"
+  ],
+  "activeNav": "Inbox",
+  "stats": [
+    {
+      "label": "Unassigned",
+      "value": "18"
+    },
+    {
+      "label": "Waiting",
+      "value": "12"
+    },
+    {
+      "label": "SLA risk",
+      "value": "4"
+    }
+  ],
+  "records": [
+    {
+      "title": "Cannot export August report",
+      "detail": "Ari from Mono",
+      "meta": "Waiting 18 min",
+      "status": "SLA risk"
+    },
+    {
+      "title": "Add a second workspace",
+      "detail": "Sam from Kanso",
+      "meta": "Waiting 31 min",
+      "status": "Open"
+    },
+    {
+      "title": "Invoice address is wrong",
+      "detail": "Jo from Vertex",
+      "meta": "Waiting 42 min",
+      "status": "Open"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Assignee",
+      "placeholder": "Choose a teammate",
+      "type": "select",
+      "options": [
+        "You",
+        "Alex Kim",
+        "Nia Jones"
+      ]
+    },
+    {
+      "label": "Priority",
+      "placeholder": "Urgent",
+      "type": "select",
+      "options": [
+        "Urgent",
+        "Normal",
+        "Low"
+      ]
+    },
+    {
+      "label": "Reply",
+      "placeholder": "Write a helpful response"
+    },
+    {
+      "label": "Resolution",
+      "placeholder": "Select outcome",
+      "type": "select",
+      "options": [
+        "Resolved",
+        "Needs engineering",
+        "Waiting on customer"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Support inbox",
+      "description": "Focus on conversations at risk of missing their response target.",
+      "action": "Open conversation"
+    },
+    {
+      "title": "Conversation",
+      "description": "Review the customer history and confirm the issue.",
+      "action": "Assign and reply"
+    },
+    {
+      "title": "Send response",
+      "description": "Check the reply and selected conversation status.",
+      "action": "Send response"
+    },
+    {
+      "title": "Response sent",
+      "description": "Ari received the reply and the selected status was saved.",
+      "action": "Next conversation"
+    }
+  ]
+}

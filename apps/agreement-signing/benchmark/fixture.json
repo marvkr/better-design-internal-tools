@@ -1,0 +1,91 @@
+{
+  "slug": "agreement-signing",
+  "name": "Agreement review and signing",
+  "product": "Countersign",
+  "category": "Legal operations",
+  "audience": "Legal and people teams",
+  "job": "Review an agreement, place required fields, and send it for signature.",
+  "nav": [
+    "Agreements",
+    "Templates",
+    "Contacts",
+    "Reports"
+  ],
+  "activeNav": "Agreements",
+  "stats": [
+    {
+      "label": "Awaiting signature",
+      "value": "9"
+    },
+    {
+      "label": "Completed this month",
+      "value": "32"
+    },
+    {
+      "label": "Expiring",
+      "value": "4"
+    }
+  ],
+  "records": [
+    {
+      "title": "Design contractor agreement",
+      "detail": "Jamie Park",
+      "meta": "Prepared 18 Aug",
+      "status": "Draft"
+    },
+    {
+      "title": "Mutual NDA",
+      "detail": "Northwind Studio",
+      "meta": "Sent 17 Aug",
+      "status": "Awaiting"
+    },
+    {
+      "title": "Offer letter",
+      "detail": "Morgan Lee",
+      "meta": "Signed 16 Aug",
+      "status": "Complete"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Agreement",
+      "placeholder": "Design contractor agreement"
+    },
+    {
+      "label": "Signer name",
+      "placeholder": "Jamie Park"
+    },
+    {
+      "label": "Signer email",
+      "placeholder": "jamie@example.com",
+      "type": "email"
+    },
+    {
+      "label": "Due date",
+      "placeholder": "Choose a date",
+      "type": "date"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Agreements",
+      "description": "Track drafts, signatures, and completed documents.",
+      "action": "Prepare agreement"
+    },
+    {
+      "title": "Add signer details",
+      "description": "Choose the agreement and identify who must sign.",
+      "action": "Place fields"
+    },
+    {
+      "title": "Review and send",
+      "description": "Confirm signature fields, message, and due date.",
+      "action": "Send agreement"
+    },
+    {
+      "title": "Agreement sent",
+      "description": "Jamie received a secure link to review and sign.",
+      "action": "Track agreement"
+    }
+  ]
+}

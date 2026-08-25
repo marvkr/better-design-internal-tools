@@ -1,0 +1,14 @@
+{
+  "betterDesignMcpOperationsInOrder":["get-ui-principle","get-ux-principle","find-design-system","create-design-system","get-design-system-status (complete)","generated-registry-install","find-icon-library","find-icons","install-icons","get-review-rules","check-comprehension","inspect-spacing (first call; capture script only)"],
+  "localCommands":[
+    {"command":"npx shadcn@latest add https://better-design.com/api/projects/49aa984c-0715-4bd5-8dfb-ade16671a13d/registry/all.json","outcome":"passed in the existing treatment run; generated registry files are present"},
+    {"command":"bun run typecheck","outcome":"passed"},
+    {"command":"bun run lint","outcome":"passed"},
+    {"command":"bun run test","outcome":"passed; 1 test, 3 expectations"},
+    {"command":"bun run build","outcome":"passed; Next.js emitted the existing workspace-root warning"},
+    {"command":"rg -n -i 'lucide|Lucide' src components.json eslint.config.mjs package.json || true","outcome":"passed for imports and source references; package dependency remains unchanged per prompt"}
+  ],
+  "filesChanged":["src/app/page.tsx","benchmark/design-system.lock.json","benchmark/icons.lock.json","benchmark/evidence.json"],
+  "toolLimitations":["Better Design MCP tools and the Chrome plugin are unavailable in this continuation session.","benchmark/spacing-states.json is absent, so the capture script could not be evaluated and inspect-spacing could not be called a second time with real states at widths 1440, 1728, and 390. This run remains invalid for spacing completion."],
+  "actualAgentSessionSettings":{"host":"codex","cliVersion":"0.149.0","model":"gpt-5.6-luna","permissionMode":"dangerously-bypass-approvals-and-sandbox","history":"ephemeral","outputFormat":"jsonl","timeBudgetSeconds":3600,"mcp":{"control":"none, enforced with --ignore-user-config and Apps/plugins disabled","treatment":"better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled"}}
+}

@@ -1,0 +1,11 @@
+{
+  "generatedProjectId": "71c877da-4f5d-4b7c-90b2-f8ccf3ec8332",
+  "assignmentSource": "generated registry meta.iconLibrary and get-design-system-status output",
+  "library": "Iconoir",
+  "libraryId": "iconoir",
+  "provider": "Iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-left", "arrow-right", "calendar", "check", "chevron-down", "chevron-up", "home", "mail", "refresh"],
+  "manifestFile": "src/components/icons/.library.json",
+  "componentFiles": ["src/components/icons/arrow-left.tsx", "src/components/icons/arrow-right.tsx", "src/components/icons/calendar.tsx", "src/components/icons/check.tsx", "src/components/icons/chevron-down.tsx", "src/components/icons/chevron-up.tsx", "src/components/icons/home.tsx", "src/components/icons/index.ts", "src/components/icons/mail.tsx", "src/components/icons/refresh.tsx"]
+}

@@ -1,0 +1,21 @@
+{
+  "baseSelection": {
+    "firstRankedId": "atelier",
+    "rank": 1,
+    "name": "Atelier",
+    "previewUrl": "https://better-design.com/design-systems/atelier"
+  },
+  "generatedProject": {
+    "projectId": "8f5baaf6-31b4-44b9-8653-1dca026a3b4b",
+    "projectUrl": "https://better-design.com/projects/8f5baaf6-31b4-44b9-8653-1dca026a3b4b",
+    "previewUrl": "https://better-design.com/preview/da4cca81-aed1-45e6-b731-e871a5e2a5a5"
+  },
+  "registry": {
+    "url": "https://better-design.com/api/projects/8f5baaf6-31b4-44b9-8653-1dca026a3b4b/registry/all.json",
+    "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/8f5baaf6-31b4-44b9-8653-1dca026a3b4b/registry/all.json",
+    "iconLibraryAssignment": {"library": "iconoir", "provider": "Iconify", "variant": "default"}
+  },
+  "mcpOperations": ["get-ui-principle", "get-ux-principle", "find-design-system", "create-design-system", "get-design-system-status", "find-icon-library", "find-icons", "install-icons", "get-review-rules", "check-comprehension", "inspect-spacing"],
+  "installOutcome": "Generated registry installed successfully; 200 files created or updated.",
+  "installedFiles": ["src/app/globals.css", "src/components/ui", "src/lib/motion.ts", "src/lib/better-design-guards.ts", "src/.better-design/rules.md", "src/.better-design/eslint-design-system.mjs"]
+}

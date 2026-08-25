@@ -1,0 +1,102 @@
+{
+  "slug": "meeting-scheduling",
+  "name": "Internal meeting scheduling",
+  "product": "Tempo",
+  "category": "Team operations",
+  "audience": "Recruiting and people teams",
+  "job": "Schedule a panel interview across several calendars without double-booking anyone.",
+  "nav": [
+    "Events",
+    "Availability",
+    "Teams",
+    "Analytics"
+  ],
+  "activeNav": "Events",
+  "stats": [
+    {
+      "label": "Interviews this week",
+      "value": "14"
+    },
+    {
+      "label": "Needs scheduling",
+      "value": "6"
+    },
+    {
+      "label": "Conflicts",
+      "value": "2"
+    }
+  ],
+  "records": [
+    {
+      "title": "Product designer panel",
+      "detail": "Jamie Park",
+      "meta": "4 interviewers",
+      "status": "Needs time"
+    },
+    {
+      "title": "Engineering screen",
+      "detail": "Morgan Lee",
+      "meta": "Tomorrow at 14:30",
+      "status": "Confirmed"
+    },
+    {
+      "title": "Culture interview",
+      "detail": "Taylor Reed",
+      "meta": "Fri at 10:00",
+      "status": "Confirmed"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Candidate",
+      "placeholder": "Jamie Park"
+    },
+    {
+      "label": "Interview type",
+      "placeholder": "Panel interview",
+      "type": "select",
+      "options": [
+        "Panel interview",
+        "Screen",
+        "Culture interview"
+      ]
+    },
+    {
+      "label": "Duration",
+      "placeholder": "60 minutes",
+      "type": "select",
+      "options": [
+        "30 minutes",
+        "45 minutes",
+        "60 minutes"
+      ]
+    },
+    {
+      "label": "Date",
+      "placeholder": "Choose a date",
+      "type": "date"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Interview schedule",
+      "description": "See confirmed interviews and candidates who still need a time.",
+      "action": "Schedule interview"
+    },
+    {
+      "title": "Interview details",
+      "description": "Choose the candidate, interview type, and panel members.",
+      "action": "Find times"
+    },
+    {
+      "title": "Choose a time",
+      "description": "Compare panel availability and select the best slot.",
+      "action": "Confirm interview"
+    },
+    {
+      "title": "Interview confirmed",
+      "description": "Jamie and the panel received calendar invitations.",
+      "action": "View event"
+    }
+  ]
+}

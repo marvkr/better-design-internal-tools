@@ -1,0 +1,96 @@
+{
+  "slug": "newsletter-creation",
+  "name": "Newsletter creation",
+  "product": "Dispatch",
+  "category": "Marketing operations",
+  "audience": "Lifecycle marketing teams",
+  "job": "Draft, review, and schedule a product update newsletter.",
+  "nav": [
+    "Overview",
+    "Posts",
+    "Audience",
+    "Automations"
+  ],
+  "activeNav": "Posts",
+  "stats": [
+    {
+      "label": "Subscribers",
+      "value": "24,860"
+    },
+    {
+      "label": "Avg. open rate",
+      "value": "48%"
+    },
+    {
+      "label": "Drafts",
+      "value": "3"
+    }
+  ],
+  "records": [
+    {
+      "title": "August product update",
+      "detail": "Product news",
+      "meta": "Edited 8 min ago",
+      "status": "Draft"
+    },
+    {
+      "title": "Workflow templates",
+      "detail": "Education",
+      "meta": "Sent 12 Aug",
+      "status": "52% opened"
+    },
+    {
+      "title": "New pricing explained",
+      "detail": "Company news",
+      "meta": "Sent 4 Aug",
+      "status": "46% opened"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Subject",
+      "placeholder": "What shipped in August"
+    },
+    {
+      "label": "Preview text",
+      "placeholder": "Faster reports, cleaner exports, and more"
+    },
+    {
+      "label": "Audience",
+      "placeholder": "Active subscribers",
+      "type": "select",
+      "options": [
+        "Active subscribers",
+        "Trial users",
+        "Customers"
+      ]
+    },
+    {
+      "label": "Send date",
+      "placeholder": "Choose a date",
+      "type": "date"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Posts",
+      "description": "Manage drafts, scheduled sends, and published newsletters.",
+      "action": "Create post"
+    },
+    {
+      "title": "Write the update",
+      "description": "Set the subject, preview, and message for subscribers.",
+      "action": "Preview post"
+    },
+    {
+      "title": "Review and schedule",
+      "description": "Check the audience and delivery time before publishing.",
+      "action": "Schedule post"
+    },
+    {
+      "title": "Post scheduled",
+      "description": "The August update will reach 24,860 subscribers tomorrow.",
+      "action": "View post"
+    }
+  ]
+}

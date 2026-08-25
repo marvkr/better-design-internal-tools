@@ -1,0 +1,1 @@
+import type { IconProps } from "./shared"; import { IconBase } from "./shared"; export function SettingsIcon(p: IconProps) { return <IconBase {...p}><circle cx="12" cy="12" r="3"/><path d="m19 15 2 1-2 3-2-1-2 1v3h-6v-3l-2-1-2 1-2-3 2-1V9L3 8l2-3 2 1 2-1V2h6v3l2 1 2-1 2 3-2 1Z"/></IconBase>; }

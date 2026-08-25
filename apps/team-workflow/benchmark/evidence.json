@@ -1,0 +1,28 @@
+{
+  "receipt": "Ritual team-workflow standalone internal-tool build continuation",
+  "actualAgentSessionSettings": {
+    "host": "codex",
+    "cliVersion": "0.149.0",
+    "model": "gpt-5.6-luna",
+    "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+    "history": "ephemeral",
+    "outputFormat": "jsonl",
+    "timeBudgetSeconds": 3600,
+    "mcp": {"control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled"}
+  },
+  "betterDesignMcpOperationsInOrder": ["get-ui-principle", "get-ux-principle", "find-design-system", "create-design-system", "get-design-system-status", "find-icon-library", "find-icons", "install-icons", "get-review-rules", "check-comprehension", "inspect-spacing"],
+  "localCommands": [
+    {"command": "npx shadcn@latest add https://better-design.com/api/projects/8f5baaf6-31b4-44b9-8653-1dca026a3b4b/registry/all.json", "outcome": "pass; generated registry installed"},
+    {"command": "bun run typecheck", "outcome": "pass"},
+    {"command": "bun run lint", "outcome": "pass"},
+    {"command": "bun test", "outcome": "pass; one workflow contract test"},
+    {"command": "bun run build", "outcome": "pass; Next.js production build completed"},
+    {"command": "rg -n 'from \\\"lucide-react\\\"' src", "outcome": "pass; no Lucide imports remain"},
+    {"command": "git diff --check", "outcome": "pass"},
+    {"command": "node receipt-key check", "outcome": "pass; stable receipt fields parse and are present"}
+  ],
+  "betterDesignReview": {"reviewRules": "pass; no critical or serious findings retained", "comprehension": "pass for overview, build, review, and completion screens", "inspectSpacing": "blocked; spacing-states.json is absent, so the required second measured call cannot be truthfully completed"},
+  "filesChanged": ["src/components/icons/compat.tsx", "src/components/ui/chart-*.tsx", "src/lib/workflow.test.ts", "benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json"],
+  "toolLimitations": ["Better Design MCP and Chrome plugin operations are not exposed in this continuation session. spacing-states.json is absent, so inspect-spacing cannot be rerun with exact captured states. No separate browser was launched."],
+  "fixtureFilesUnchanged": ["benchmark/fixture.json", "benchmark/acceptance.json", "benchmark/session-settings.json"]
+}

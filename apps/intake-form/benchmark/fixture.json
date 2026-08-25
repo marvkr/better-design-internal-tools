@@ -1,0 +1,95 @@
+{
+  "slug": "intake-form",
+  "name": "Intake-form creation",
+  "product": "Formline",
+  "category": "Operations enablement",
+  "audience": "Operations and service teams",
+  "job": "Create and publish an internal request form with clear ownership.",
+  "nav": [
+    "Forms",
+    "Responses",
+    "Workspaces",
+    "Settings"
+  ],
+  "activeNav": "Forms",
+  "stats": [
+    {
+      "label": "Active forms",
+      "value": "8"
+    },
+    {
+      "label": "Responses this week",
+      "value": "146"
+    },
+    {
+      "label": "Needs review",
+      "value": "19"
+    }
+  ],
+  "records": [
+    {
+      "title": "Creative request",
+      "detail": "Marketing",
+      "meta": "42 responses",
+      "status": "Active"
+    },
+    {
+      "title": "New vendor",
+      "detail": "Finance",
+      "meta": "18 responses",
+      "status": "Active"
+    },
+    {
+      "title": "Data access",
+      "detail": "Security",
+      "meta": "86 responses",
+      "status": "Active"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Form name",
+      "placeholder": "Creative request"
+    },
+    {
+      "label": "Request title",
+      "placeholder": "What do you need?"
+    },
+    {
+      "label": "Due date question",
+      "placeholder": "When is this needed?"
+    },
+    {
+      "label": "Owner",
+      "placeholder": "Creative operations",
+      "type": "select",
+      "options": [
+        "Creative operations",
+        "Finance",
+        "Security"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Forms",
+      "description": "Manage active intake forms and incoming work.",
+      "action": "Create form"
+    },
+    {
+      "title": "Build the form",
+      "description": "Add the questions requesters must answer.",
+      "action": "Set routing"
+    },
+    {
+      "title": "Review and publish",
+      "description": "Confirm ownership, response access, and the form link.",
+      "action": "Publish form"
+    },
+    {
+      "title": "Form published",
+      "description": "Creative request is ready to share with the company.",
+      "action": "Copy form link"
+    }
+  ]
+}

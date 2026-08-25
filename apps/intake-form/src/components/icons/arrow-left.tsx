@@ -1,0 +1,1 @@
+import type { IconProps } from "./shared"; import { IconBase } from "./shared"; export function ArrowLeftIcon(p: IconProps) { return <IconBase {...p}><path d="M21 12H3m0 0 8-8m-8 8 8 8"/></IconBase>; }

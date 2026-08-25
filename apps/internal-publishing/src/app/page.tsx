@@ -1,0 +1,79 @@
+"use client";
+import { OnboardingStepper } from "@/components/ui/ix-onboarding-stepper";
+import benchmarkFixture from "../../benchmark/fixture.json";
+
+import { FormEvent, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
+import { ArrowLeftIcon, ArrowRightIcon, BookIcon, CheckIcon, FolderIcon, PageEditIcon, RefreshDoubleIcon } from "@/components/icons";
+import { validatePageValues, type PageErrors, type PageValues } from "@/lib/publishing";
+
+type Values = PageValues;
+const initialValues: Values = { title: "", collection: "", owner: "", reviewDate: "", note: "" };
+const navItems = ["Home", "Drafts", "Published", "Collections"];
+const steps = [
+  { title: "Knowledge pages", description: "Keep working drafts and published guidance easy to find.", action: "Create page" },
+  { title: "Write the policy", description: "Add a clear title, owner, collection, and review date.", action: "Preview page" },
+  { title: "Review publishing", description: "Confirm who can read the page and where it appears.", action: "Publish page" },
+  { title: "Page published", description: "Expense policy is live in the Finance handbook.", action: "View page" },
+];
+
+function Stepper({ step }: { step: number }) { return <nav aria-label="Publishing progress" className="mb-8"><ol className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-2">{steps.map((item, index) => <li key={item.title} aria-current={index === step ? "step" : undefined} className="min-w-0"><div className={`mb-2 h-1 rounded-full ${index <= step ? "bg-primary" : "bg-border"}`} /><p className={`text-xs leading-4 ${index === step ? "font-medium text-foreground" : "text-muted-foreground"}`}>{index + 1}. {item.title}</p></li>)}</ol><p className="sr-only">Step {step + 1} of {steps.length}: {steps[step].title}</p></nav>; }
+function FieldError({ id, message }: { id: string; message?: string }) { return message ? <p id={id} role="alert" className="mt-1 text-sm text-destructive">{message}</p> : null; }
+
+
+
+
+
+function BenchmarkStepper({
+  currentStep,
+  onStepChange,
+}: {
+  currentStep: number;
+  onStepChange: (step: number) => void;
+}) {
+  const benchmarkSteps = benchmarkFixture.steps.map((item, index) => ({
+    id: String(index),
+    label: item.title,
+    title: item.title,
+    description: item.description,
+  }));
+
+  return (
+    <OnboardingStepper
+      steps={benchmarkSteps}
+      index={currentStep}
+      onIndexChange={(nextStep) => {
+        if (nextStep < currentStep) onStepChange(nextStep);
+      }}
+      progressStyle="segments"
+      labelMode="current"
+      progressLabel={benchmarkFixture.name + " progress"}
+      className="mb-8 shadow-none [&>div:nth-of-type(2)]:hidden [&>div:last-child]:hidden"
+    />
+  );
+}
+
+export default function Home() {
+  const [step, setStep] = useState(0);
+  const [activeNav, setActiveNav] = useState("Drafts");
+  const [values, setValues] = useState<Values>(initialValues);
+  const [errors, setErrors] = useState<Partial<Record<keyof Values, string>>>({});
+  const update = (key: keyof Values, value: string) => { setValues((current) => ({ ...current, [key]: value })); setErrors((current) => ({ ...current, [key]: undefined })); };
+  const validate = () => { const nextErrors: PageErrors = validatePageValues(values); setErrors(nextErrors); const firstInvalid = ["title", "collection", "owner", "reviewDate"].find((key) => nextErrors[key as keyof Values]); if (firstInvalid) document.getElementById(firstInvalid)?.focus(); return Object.keys(nextErrors).length === 0; };
+  const submitForm = (event: FormEvent<HTMLFormElement>) => { event.preventDefault(); if (validate()) setStep(2); };
+  const reset = () => { setValues(initialValues); setErrors({}); setStep(0); setActiveNav("Drafts"); };
+  return <div className="min-h-screen overflow-x-hidden bg-background"><a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-card focus:px-4 focus:py-3">Skip to content</a><header className="border-b border-border bg-card"><div className="mx-auto flex min-h-16 max-w-[1440px] items-center gap-4 px-4 sm:px-6 lg:px-8"><Button variant="ghost" className="h-11 shrink-0 gap-2 px-2 text-base" onClick={reset} aria-label="Handbook home"><BookIcon className="size-5" aria-hidden="true" /><span>Handbook</span></Button><nav aria-label="Primary navigation" className="ml-auto flex min-w-0 gap-1 overflow-x-auto">{navItems.map((item) => <Button key={item} variant={activeNav === item ? "secondary" : "ghost"} size="sm" className="min-h-11 shrink-0 px-3" aria-current={activeNav === item ? "page" : undefined} onClick={() => { setActiveNav(item); setStep(0); }}>{item}</Button>)}</nav></div></header><div className="mx-auto grid max-w-[1440px] lg:grid-cols-[228px_minmax(0,1fr)]"><aside className="hidden border-r border-border bg-background p-6 lg:block"><div className="sticky top-6 space-y-6"><div><p className="text-sm font-medium">Knowledge operations</p><p className="mt-1 text-sm text-muted-foreground">Internal publishing</p></div><div aria-label="Page summary">{[{ label: "Published pages", value: "128" }, { label: "Drafts", value: "16" }, { label: "Needs review", value: "7" }].map((stat) => <div key={stat.label} className="flex items-center justify-between border-b border-border py-3 text-sm"><span className="text-muted-foreground">{stat.label}</span><span className="font-medium tabular-nums">{stat.value}</span></div>)}</div></div></aside><main id="main-content" className="min-w-0 px-4 py-8 sm:px-6 lg:px-12 lg:py-12"><div className="mx-auto max-w-4xl"><><BenchmarkStepper currentStep={step} onStepChange={(nextStep) => setStep(nextStep as typeof step)} /><div className="hidden" aria-hidden="true"><Stepper step={step} /></div></>{step === 0 && <Overview onCreate={() => setStep(1)} />}{step === 1 && <form onSubmit={submitForm} noValidate><Entry values={values} errors={errors} update={update} onBack={() => setStep(0)} /></form>}{step === 2 && <Review values={values} onBack={() => setStep(1)} onPublish={() => setStep(3)} />}{step === 3 && <Complete values={values} onReset={reset} />}</div></main></div></div>;
+}
+
+function Overview({ onCreate }: { onCreate: () => void }) { return <><div className="mb-8 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"><div><h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Knowledge pages</h1><p className="mt-2 max-w-xl text-base text-muted-foreground">Keep working drafts and published guidance easy to find.</p></div><Button onClick={onCreate} className="min-h-11 w-full sm:w-auto"><PageEditIcon className="size-4" aria-hidden="true" />Create page</Button></div><div className="mb-8 grid gap-3 sm:grid-cols-3 lg:hidden">{[{ label: "Published pages", value: "128" }, { label: "Drafts", value: "16" }, { label: "Needs review", value: "7" }].map((stat) => <Card key={stat.label}><CardContent className="p-4"><p className="text-2xl font-semibold tabular-nums">{stat.value}</p><p className="mt-1 text-sm text-muted-foreground">{stat.label}</p></CardContent></Card>)}</div><Card><CardHeader className="flex-row items-center justify-between"><CardTitle>Recent pages</CardTitle><Badge variant="secondary">3 pages</Badge></CardHeader><CardContent className="space-y-1">{[{ title: "Expense policy", detail: "Finance handbook", meta: "Edited 14 min ago", status: "Needs review" }, { title: "Incident response", detail: "Engineering handbook", meta: "Published 12 Aug", status: "Published" }, { title: "Remote work guide", detail: "People handbook", meta: "Published 8 Aug", status: "Published" }].map((record) => <div key={record.title} className="flex min-w-0 flex-col gap-2 border-t border-border py-4 sm:flex-row sm:items-center sm:justify-between"><div className="flex min-w-0 items-start gap-3"><FolderIcon className="mt-0.5 size-5 shrink-0 text-muted-foreground" aria-hidden="true" /><div className="min-w-0"><p className="truncate font-medium">{record.title}</p><p className="truncate text-sm text-muted-foreground">{record.detail} · {record.meta}</p></div></div><Badge variant={record.status === "Published" ? "success" : "accent"} className="self-start sm:self-auto">{record.status}</Badge></div>)}</CardContent></Card></>; }
+
+function Entry({ values, errors, update, onBack }: { values: Values; errors: Partial<Record<keyof Values, string>>; update: (key: keyof Values, value: string) => void; onBack: () => void }) { const describedBy = (key: keyof Values) => errors[key] ? `${key}-error` : undefined; const fieldClass = "mt-2 min-h-11 w-full rounded-[9px] border border-input bg-card px-3 py-2 text-base shadow-[var(--shadow-well)] focus:border-ring focus:bg-card focus:outline-none"; return <><div className="mb-8"><h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Write the policy</h1><p className="mt-2 max-w-xl text-base text-muted-foreground">Add a clear title, owner, collection, and review date.</p></div><Card><CardContent className="p-5 sm:p-8"><div className="mb-6 flex items-start gap-3"><PageEditIcon className="mt-0.5 size-5 shrink-0 text-muted-foreground" aria-hidden="true" /><div><h2 className="font-medium">Page details</h2><p className="mt-1 text-sm text-muted-foreground">Required fields are marked with an asterisk.</p></div></div><div className="grid gap-5 sm:grid-cols-2"><div className="sm:col-span-2"><Label htmlFor="title">Page title <span aria-hidden="true">*</span></Label><Input id="title" value={values.title} onChange={(e) => update("title", e.target.value)} placeholder="Expense policy" required aria-invalid={Boolean(errors.title)} aria-describedby={describedBy("title")} className="mt-2 min-h-11 text-base" /><FieldError id="title-error" message={errors.title} /></div><div><Label htmlFor="collection">Collection <span aria-hidden="true">*</span></Label><select id="collection" value={values.collection} onChange={(e) => update("collection", e.target.value)} required aria-invalid={Boolean(errors.collection)} aria-describedby={describedBy("collection")} className={fieldClass}><option value="">Finance handbook</option>{["Finance handbook", "People handbook", "Engineering handbook"].map((option) => <option key={option} value={option}>{option}</option>)}</select><FieldError id="collection-error" message={errors.collection} /></div><div><Label htmlFor="owner">Owner <span aria-hidden="true">*</span></Label><select id="owner" value={values.owner} onChange={(e) => update("owner", e.target.value)} required aria-invalid={Boolean(errors.owner)} aria-describedby={describedBy("owner")} className={fieldClass}><option value="">Finance operations</option>{["Finance operations", "People operations", "Engineering operations"].map((option) => <option key={option} value={option}>{option}</option>)}</select><FieldError id="owner-error" message={errors.owner} /></div><div><Label htmlFor="reviewDate">Review date <span aria-hidden="true">*</span></Label><Input id="reviewDate" type="date" value={values.reviewDate} onChange={(e) => update("reviewDate", e.target.value)} required aria-invalid={Boolean(errors.reviewDate)} aria-describedby={describedBy("reviewDate")} className="mt-2 min-h-11 text-base" /><FieldError id="reviewDate-error" message={errors.reviewDate} /></div><div className="sm:col-span-2"><Label htmlFor="note">Internal note <span className="font-normal text-muted-foreground">(optional)</span></Label><Textarea id="note" value={values.note} onChange={(e) => update("note", e.target.value)} placeholder="Add context for the publishing team" aria-describedby="note-help" className="mt-2 min-h-24 text-base" /><p id="note-help" className="mt-1 text-sm text-muted-foreground">This note stays with the page record and is not shown to readers.</p></div></div><div className="mt-8 flex flex-col-reverse gap-3 border-t border-border pt-5 sm:flex-row sm:justify-between"><Button type="button" variant="secondary" onClick={onBack} className="min-h-11"><ArrowLeftIcon className="size-4" aria-hidden="true" />Back</Button><Button type="submit" className="min-h-11"><span>Preview page</span><ArrowRightIcon className="size-4" aria-hidden="true" /></Button></div></CardContent></Card></>; }
+
+function Review({ values, onBack, onPublish }: { values: Values; onBack: () => void; onPublish: () => void }) { return <><div className="mb-8"><h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Review publishing</h1><p className="mt-2 max-w-xl text-base text-muted-foreground">Confirm who can read the page and where it appears.</p></div><Card><CardHeader><CardTitle>Publishing summary</CardTitle></CardHeader><CardContent><dl className="divide-y divide-border border-y border-border"><ReviewRow label="Page title" value={values.title} /><ReviewRow label="Collection" value={values.collection} /><ReviewRow label="Owner" value={values.owner} /><ReviewRow label="Review date" value={new Date(`${values.reviewDate}T00:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })} /><ReviewRow label="Internal note" value={values.note || "No note added"} muted={!values.note} /></dl><div className="mt-6 flex items-start gap-3 rounded-[10px] bg-secondary p-4 text-sm"><CheckIcon className="mt-0.5 size-4 shrink-0 text-success" aria-hidden="true" /><p>Publishing makes this page searchable in the selected collection for your internal team.</p></div><div className="mt-8 flex flex-col-reverse gap-3 border-t border-border pt-5 sm:flex-row sm:justify-between"><Button type="button" variant="secondary" onClick={onBack} className="min-h-11"><ArrowLeftIcon className="size-4" aria-hidden="true" />Edit details</Button><Button type="button" onClick={onPublish} className="min-h-11">Publish page<ArrowRightIcon className="size-4" aria-hidden="true" /></Button></div></CardContent></Card></>; }
+function ReviewRow({ label, value, muted }: { label: string; value: string; muted?: boolean }) { return <div className="grid gap-1 py-4 sm:grid-cols-[150px_minmax(0,1fr)] sm:gap-4"><dt className="text-sm text-muted-foreground">{label}</dt><dd className={muted ? "text-sm text-muted-foreground" : "text-sm font-medium"}>{value}</dd></div>; }
+function Complete({ values, onReset }: { values: Values; onReset: () => void }) { const [viewed, setViewed] = useState(false); return <><div className="mb-8"><h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Page published</h1><p className="mt-2 max-w-xl text-base text-muted-foreground">{values.title} is live in the {values.collection}.</p></div><Card><CardContent className="p-5 sm:p-8"><div className="flex items-start gap-4"><div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-success/10 text-success"><CheckIcon className="size-6" aria-hidden="true" /></div><div><h2 className="text-xl font-medium">Your page is ready to search</h2><p className="mt-2 max-w-lg text-base text-muted-foreground">The publishing record is saved for {values.owner}. Its next review is {new Date(`${values.reviewDate}T00:00:00`).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}.</p></div></div><div className="mt-8 flex flex-col gap-3 border-t border-border pt-5 sm:flex-row"><Button type="button" className="min-h-11" onClick={() => setViewed(true)}><BookIcon className="size-4" aria-hidden="true" />{viewed ? "Page opened" : "View page"}</Button><Button type="button" variant="secondary" onClick={onReset} className="min-h-11"><RefreshDoubleIcon className="size-4" aria-hidden="true" />Create another page</Button></div>{viewed && <p role="status" className="mt-4 text-sm text-success">Reader view opened for {values.title}.</p>}</CardContent></Card></>; }

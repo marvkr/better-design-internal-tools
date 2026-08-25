@@ -1,0 +1,14 @@
+{
+  "agentSessionSettings": {"host": "codex", "cliVersion": "0.149.0", "model": "gpt-5.6-luna", "permissionMode": "dangerously-bypass-approvals-and-sandbox", "history": "ephemeral", "outputFormat": "jsonl", "timeBudgetSeconds": 3600, "mcp": {"control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled"}},
+  "commands": [
+    {"command": "npx shadcn@latest add https://better-design.com/api/projects/7290c239-36e9-4040-82b7-431bf5134b87/registry/all.json --yes --overwrite", "outcome": "passed; created 200 registry files and updated generated tokens"},
+    {"command": "bun run typecheck", "outcome": "passed"},
+    {"command": "bun run lint", "outcome": "passed with one generated guard warning"},
+    {"command": "bunx eslint src/app/page.tsx src/app/layout.tsx src/components/icons src/components/ui/button.tsx src/components/ui/card.tsx src/components/ui/input.tsx src/components/ui/native-select.tsx src/components/ui/progress.tsx src/components/ui/textarea.tsx", "outcome": "passed with ignored-generated-file warnings"},
+    {"command": "bun test", "outcome": "no tests found; exit 1"},
+    {"command": "bun run build", "outcome": "passed; static route / generated"}
+  ],
+  "filesChanged": ["src/app/page.tsx", "src/app/layout.tsx", "src/app/globals.css", "components.json", "tsconfig.json", "eslint.config.mjs", "src/components/icons/*", "src/components/ui/* (generated registry)", "src/.better-design/*", "benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json"],
+  "toolLimitations": ["Connected Chrome/browser integration was unavailable, so inspect-spacing remained at needs-capture and no browser interaction verification was claimed. No separate browser was launched."],
+  "betterDesign": {"comprehension": "passed on Signal charts overview", "spacing": "capture script received; 1440/1728/390 rendered states not captured"}
+}

@@ -1,0 +1,1 @@
+import type { IconProps } from "./shared"; import { IconBase } from "./shared"; export function WarningCircleIcon(p: IconProps) { return <IconBase {...p}><circle cx="12" cy="12" r="9"/><path d="M12 8v5m0 3h.01"/></IconBase>; }

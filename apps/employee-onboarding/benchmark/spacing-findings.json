@@ -1,0 +1,75 @@
+{
+  "status": "completed",
+  "score": 45,
+  "summary": {
+    "critical": 0,
+    "serious": 4,
+    "moderate": 3,
+    "total": 7
+  },
+  "capturedWidths": [
+    390,
+    1440,
+    1728
+  ],
+  "missingWidths": [],
+  "rubricStatus": "loaded",
+  "findings": [
+    {
+      "id": "spacing-2",
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-1440",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@26 extends outside the 1440px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": ["div:nth-of-type(1)@26"],
+      "evidence": [
+        { "label": "Left edge", "value": -692.5, "unit": "px" },
+        { "label": "Right edge", "value": 329.5, "unit": "px" },
+        { "label": "Viewport width", "value": 1440, "unit": "px" }
+      ]
+    },
+    {
+      "id": "spacing-4",
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-1728",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@26 extends outside the 1728px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": ["div:nth-of-type(1)@26"],
+      "evidence": [
+        { "label": "Left edge", "value": -548.5, "unit": "px" },
+        { "label": "Right edge", "value": 473.5, "unit": "px" },
+        { "label": "Viewport width", "value": 1728, "unit": "px" }
+      ]
+    },
+    {
+      "id": "spacing-6",
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "Documents extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": ["button:nth-of-type(4)@17"],
+      "evidence": [
+        { "label": "Left edge", "value": 297.66, "unit": "px" },
+        { "label": "Right edge", "value": 407.29, "unit": "px" },
+        { "label": "Viewport width", "value": 390, "unit": "px" }
+      ]
+    },
+    {
+      "id": "spacing-7",
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@25 extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": ["div:nth-of-type(1)@25"],
+      "evidence": [
+        { "label": "Left edge", "value": -324, "unit": "px" },
+        { "label": "Right edge", "value": 17, "unit": "px" },
+        { "label": "Viewport width", "value": 390, "unit": "px" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "library": "fe",
+  "prefix": "fe",
+  "source": "iconify",
+  "installedAt": "2026-08-24T15:18:28.520Z",
+  "icons": ["activity", "arrow-left", "arrow-right", "check-circle", "drop-right", "git", "globe", "link-external", "plus"]
+}

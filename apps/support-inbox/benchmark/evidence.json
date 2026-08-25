@@ -1,0 +1,65 @@
+{
+  "receipt": "Harbor support inbox triage implementation",
+  "actualAgentSessionSettings": {
+    "host": "codex",
+    "cliVersion": "0.149.0",
+    "model": "gpt-5.6-luna",
+    "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+    "history": "ephemeral",
+    "outputFormat": "jsonl",
+    "timeBudgetSeconds": 3600,
+    "mcp": { "control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled" }
+  },
+  "sessionSettings": {
+    "host": "codex",
+    "cliVersion": "0.149.0",
+    "model": "gpt-5.6-luna",
+    "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+    "history": "ephemeral",
+    "outputFormat": "jsonl",
+    "timeBudgetSeconds": 3600,
+    "mcp": { "control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled" }
+  },
+  "commands": [
+    { "command": "npx shadcn@latest add https://better-design.com/api/projects/70f0f814-a756-4712-8ff3-ddb287646106/registry/all.json", "outcome": "initial prompt did not install in non-interactive mode" },
+    { "command": "npx shadcn@latest add -y -o https://better-design.com/api/projects/70f0f814-a756-4712-8ff3-ddb287646106/registry/all.json", "outcome": "passed; created 200 registry files and updated generated tokens/components" },
+    { "command": "bun run typecheck", "outcome": "passed" },
+    { "command": "bun run lint", "outcome": "passed; generated optional registry showcase components are excluded from the app lint target" },
+    { "command": "bun test", "outcome": "passed; 1 fixture contract test" },
+    { "command": "bun run build", "outcome": "passed; production build completed with Next.js warning that package.json is outside the current Git repository" }
+  ],
+  "localCommands": [
+    { "command": "bun run typecheck", "outcome": "passed" },
+    { "command": "bun run lint", "outcome": "passed" },
+    { "command": "bun test", "outcome": "passed; 1 test" },
+    { "command": "bun run build", "outcome": "passed; Next.js production build completed with the repository-root warning" },
+    { "command": "rg -n 'lucide|Lucide' src components.json", "outcome": "passed; no Lucide imports remain" }
+  ],
+  "betterDesignMcpOperationsInOrder": [
+    "get-ui-principle",
+    "get-ux-principle",
+    "find-design-system",
+    "create-design-system",
+    "get-design-system-status",
+    "generated registry install",
+    "detect-icon-library",
+    "find-icons",
+    "install-icons",
+    "get-review-rules",
+    "check-comprehension",
+    "inspect-spacing (capture request; no states)"
+  ],
+  "betterDesignOperations": [
+    "Loaded UI and UX principles.",
+    "Selected first-ranked base Precision.",
+    "Created project 70f0f814-a756-4712-8ff3-ddb287646106.",
+    "Polled design-system status until completed.",
+    "Installed generated shadcn registry.",
+    "Read generated Iconoir assignment and installed owned Iconoir components.",
+    "Loaded review rules.",
+    "Ran comprehension checks for each screen; all passed.",
+    "Requested inspect-spacing capture script; measurement incomplete because connected Chrome integration was unavailable."
+  ],
+  "filesChanged": ["src/app/page.tsx", "src/app/layout.tsx", "src/app/page.test.ts", "src/app/globals.css", "src/components/icons/*", "src/components/ui/* generated registry output", "src/lib/* generated registry output", "eslint.config.mjs", "tsconfig.json", "package.json", "bun.lock", "benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json"],
+  "toolLimitations": ["benchmark/spacing-states.json is absent and no connected Chrome integration is available, so the capture script could not be evaluated at 1440, 1728, and 390 widths; rendered DOM spacing measurement and real-browser control verification remain incomplete. No separate browser was launched."]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "team-workflow",
+  "requiredSteps": [
+    "Workflows",
+    "Build the request",
+    "Review workflow",
+    "Workflow published"
+  ],
+  "requiredFields": [
+    "Workflow name",
+    "Request channel",
+    "Approver",
+    "Reminder"
+  ],
+  "checks": [
+    "overview renders supplied stats and records",
+    "primary action opens data entry",
+    "required-field validation focuses the first invalid field",
+    "entered values and optional note survive back and forward navigation",
+    "review renders entered values",
+    "completion renders supplied completion copy",
+    "reset returns to overview",
+    "keyboard focus remains visible",
+    "no horizontal overflow at fixed viewports"
+  ]
+}

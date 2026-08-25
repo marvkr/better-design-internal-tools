@@ -1,0 +1,13 @@
+{
+  "generatedProjectId": "35322221-026b-4e97-81b1-57524b9debbd",
+  "projectId": "35322221-026b-4e97-81b1-57524b9debbd",
+  "assignmentSource": "get-design-system-status generated registry metadata",
+  "library": "Feather Icons",
+  "libraryId": "fe",
+  "provider": "Iconify",
+  "variant": "default",
+  "installedIconNames": ["activity", "arrow-left", "arrow-right", "check-circle", "drop-right", "git", "globe", "link-external", "plus"],
+  "manifestFile": "src/components/icons/.library.json",
+  "manifest": "src/components/icons/.library.json",
+  "componentFiles": ["src/components/icons/activity.tsx", "src/components/icons/arrow-left.tsx", "src/components/icons/arrow-right.tsx", "src/components/icons/check-circle.tsx", "src/components/icons/drop-right.tsx", "src/components/icons/git.tsx", "src/components/icons/globe.tsx", "src/components/icons/link-external.tsx", "src/components/icons/plus.tsx", "src/components/icons/index.ts"]
+}

@@ -1,0 +1,102 @@
+{
+  "slug": "internal-publishing",
+  "name": "Internal page publishing",
+  "product": "Handbook",
+  "category": "Knowledge operations",
+  "audience": "Operations and enablement teams",
+  "job": "Turn a working document into a searchable internal policy page.",
+  "nav": [
+    "Home",
+    "Drafts",
+    "Published",
+    "Collections"
+  ],
+  "activeNav": "Drafts",
+  "stats": [
+    {
+      "label": "Published pages",
+      "value": "128"
+    },
+    {
+      "label": "Drafts",
+      "value": "16"
+    },
+    {
+      "label": "Needs review",
+      "value": "7"
+    }
+  ],
+  "records": [
+    {
+      "title": "Expense policy",
+      "detail": "Finance handbook",
+      "meta": "Edited 14 min ago",
+      "status": "Needs review"
+    },
+    {
+      "title": "Incident response",
+      "detail": "Engineering handbook",
+      "meta": "Published 12 Aug",
+      "status": "Published"
+    },
+    {
+      "title": "Remote work guide",
+      "detail": "People handbook",
+      "meta": "Published 8 Aug",
+      "status": "Published"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Page title",
+      "placeholder": "Expense policy"
+    },
+    {
+      "label": "Collection",
+      "placeholder": "Finance handbook",
+      "type": "select",
+      "options": [
+        "Finance handbook",
+        "People handbook",
+        "Engineering handbook"
+      ]
+    },
+    {
+      "label": "Owner",
+      "placeholder": "Finance operations",
+      "type": "select",
+      "options": [
+        "Finance operations",
+        "People operations",
+        "Engineering operations"
+      ]
+    },
+    {
+      "label": "Review date",
+      "placeholder": "Choose a date",
+      "type": "date"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Knowledge pages",
+      "description": "Keep working drafts and published guidance easy to find.",
+      "action": "Create page"
+    },
+    {
+      "title": "Write the policy",
+      "description": "Add a clear title, owner, collection, and review date.",
+      "action": "Preview page"
+    },
+    {
+      "title": "Review publishing",
+      "description": "Confirm who can read the page and where it appears.",
+      "action": "Publish page"
+    },
+    {
+      "title": "Page published",
+      "description": "Expense policy is live in the Finance handbook.",
+      "action": "View page"
+    }
+  ]
+}

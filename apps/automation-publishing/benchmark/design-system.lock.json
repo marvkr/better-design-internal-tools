@@ -1,0 +1,40 @@
+{
+  "baseSelection": { "firstRankedId": "lane" },
+  "baseDesignSystem": { "id": "lane", "name": "Lane", "rank": 1, "url": "https://better-design.com/design-systems/lane" },
+  "generatedProject": {
+    "projectId": "1571c16d-2af1-42c2-92e1-74587e00440e",
+    "id": "1571c16d-2af1-42c2-92e1-74587e00440e",
+    "name": "aloof-notebook",
+    "projectUrl": "https://better-design.com/projects/1571c16d-2af1-42c2-92e1-74587e00440e",
+    "previewUrl": "https://better-design.com/preview/7e35a23c-37dc-4f2c-a174-4f38a2fafd57",
+    "registryUrl": "https://better-design.com/api/projects/1571c16d-2af1-42c2-92e1-74587e00440e/registry/all.json",
+    "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/1571c16d-2af1-42c2-92e1-74587e00440e/registry/all.json"
+  },
+  "registry": {
+    "url": "https://better-design.com/api/projects/1571c16d-2af1-42c2-92e1-74587e00440e/registry/all.json",
+    "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/1571c16d-2af1-42c2-92e1-74587e00440e/registry/all.json --yes --overwrite",
+    "iconLibraryAssignment": "Iconoir"
+  },
+  "iconAssignment": { "library": "Iconoir", "libraryId": "iconoir", "prefix": "iconoir", "variant": "default", "source": "generated project status meta.iconLibrary" },
+  "mcpOperations": [
+    "get-ui-principle: accessibility, spacing, typography",
+    "get-ux-principle: forms, interaction-patterns, responsive",
+    "find-design-system: selected first-ranked lane",
+    "create-design-system: completed",
+    "get-design-system-status: generating, then completed",
+    "install generated registry: completed with --yes --overwrite",
+    "find-icons: activity, link, check, arrow-right, refresh, nav-arrow-down",
+    "install-icons: completed as owned TSX components",
+    "get-review-rules: completed",
+    "check-comprehension: initial findings fixed; focused setup screen passed",
+    "inspect-spacing: capture script returned; rendered capture unavailable"
+  ],
+  "installedFiles": [
+    "src/app/globals.css",
+    "src/components/ui/* from generated registry",
+    "src/.better-design/rules.md",
+    "src/.better-design/eslint-design-system.mjs",
+    "src/lib/motion.ts",
+    "src/components/icons/*"
+  ]
+}

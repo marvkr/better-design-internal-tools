@@ -1,0 +1,10 @@
+{
+  "generatedProjectId": "b9fe724e-ebc1-4455-8c5b-789e1c20a717",
+  "assignmentSource": "generated registry status response",
+  "library": "iconoir",
+  "provider": "iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-left", "arrow-right", "book", "calendar", "check", "folder", "home-simple-door", "menu", "page-edit", "refresh-double"],
+  "manifestFile": "src/components/icons/.library.json",
+  "componentFiles": ["src/components/icons/index.ts", "src/components/icons/arrow-left.tsx", "src/components/icons/arrow-right.tsx", "src/components/icons/book.tsx", "src/components/icons/calendar.tsx", "src/components/icons/check.tsx", "src/components/icons/folder.tsx", "src/components/icons/home-simple-door.tsx", "src/components/icons/menu.tsx", "src/components/icons/page-edit.tsx", "src/components/icons/refresh-double.tsx"]
+}

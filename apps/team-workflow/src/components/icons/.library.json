@@ -1,0 +1,8 @@
+{
+  "library": "iconoir",
+  "prefix": "iconoir",
+  "source": "iconify",
+  "variant": "default",
+  "projectId": "8f5baaf6-31b4-44b9-8653-1dca026a3b4b",
+  "icons": ["activity", "arrow-left", "arrow-right", "check", "home", "plus", "refresh", "view-grid", "warning-triangle"]
+}

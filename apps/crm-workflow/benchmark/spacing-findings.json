@@ -1,0 +1,677 @@
+{
+  "status": "completed",
+  "score": 5,
+  "summary": {
+    "critical": 0,
+    "serious": 5,
+    "moderate": 9,
+    "total": 14
+  },
+  "findings": [
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "viewport-1440 uses 5 off-scale spacing values across 13 elements: 6px, 20px, 36px, 40px, 80.5px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(1)@4",
+        "nav:nth-of-type(1)@19",
+        "div:nth-of-type(1)@36",
+        "div:nth-of-type(1)@40",
+        "div:nth-of-type(1)@41",
+        "div:nth-of-type(1)@42",
+        "div:nth-of-type(1)@67",
+        "div:nth-of-type(1)@71",
+        "div:nth-of-type(1)@75",
+        "h3:nth-of-type(1)@80",
+        "div:nth-of-type(2)@87",
+        "div:nth-of-type(2)@92",
+        "div:nth-of-type(2)@97"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(1)@4 row gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@4 column gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 padding top",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 padding bottom",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 margin right",
+          "value": 80.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 margin left",
+          "value": 80.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@41 margin bottom",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@42 margin bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding left",
+          "value": 20,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-1"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-1440",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@46 extends outside the 1440px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "div:nth-of-type(1)@46"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": -367.5,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 592.5,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 1440,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-2"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "Reset measures 76.66x32px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@14"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 76.66,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 32,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-3"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "Create workflow measures 189.7x40px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@60"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 189.7,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-4"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "viewport-1728 uses 6 off-scale spacing values across 14 elements: 6px, 20px, 36px, 40px, 88px, 136.5px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(1)@4",
+        "div:nth-of-type(1)@17",
+        "nav:nth-of-type(1)@19",
+        "div:nth-of-type(1)@36",
+        "div:nth-of-type(1)@40",
+        "div:nth-of-type(1)@41",
+        "div:nth-of-type(1)@42",
+        "div:nth-of-type(1)@67",
+        "div:nth-of-type(1)@71",
+        "div:nth-of-type(1)@75",
+        "h3:nth-of-type(1)@80",
+        "div:nth-of-type(2)@87",
+        "div:nth-of-type(2)@92",
+        "div:nth-of-type(2)@97"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(1)@4 margin right",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@4 margin left",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@4 row gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@4 column gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@17 margin right",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@17 margin left",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 padding top",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 padding bottom",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 margin right",
+          "value": 88,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@40 margin left",
+          "value": 88,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@41 margin bottom",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@42 margin bottom",
+          "value": 20,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-5"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-1728",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@46 extends outside the 1728px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "div:nth-of-type(1)@46"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": -223.5,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 736.5,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 1728,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-6"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "Reset measures 76.66x32px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@14"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 76.66,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 32,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-7"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "Create workflow measures 189.7x40px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@60"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 189.7,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-8"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "viewport-390 uses 4 off-scale spacing values across 11 elements: 6px, 20px, 28px, 36px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(1)@4",
+        "div:nth-of-type(1)@32",
+        "div:nth-of-type(1)@33",
+        "div:nth-of-type(1)@34",
+        "div:nth-of-type(1)@59",
+        "div:nth-of-type(1)@63",
+        "div:nth-of-type(1)@67",
+        "h3:nth-of-type(1)@72",
+        "div:nth-of-type(2)@79",
+        "div:nth-of-type(2)@84",
+        "div:nth-of-type(2)@89"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(1)@4 row gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@4 column gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@32 padding top",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@32 padding bottom",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@33 margin bottom",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@34 margin bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@59 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@59 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@59 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@59 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@67 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "h3:nth-of-type(1)@72 margin bottom",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@79 row gap",
+          "value": 6,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-9"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "Workflows extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "a:nth-of-type(4)@27"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": 318.99,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 434.1,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-10"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "span:nth-of-type(1)@30 extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "span:nth-of-type(1)@30"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": 360.99,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 422.1,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-11"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@38 extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "div:nth-of-type(1)@38"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": -241.25,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 101.75,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-12"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "Reset measures 76.66x32px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@9"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 76.66,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 32,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-13"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "Create workflow measures 343x40px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@52"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 343,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-14"
+    }
+  ],
+  "capturedWidths": [
+    390,
+    1440,
+    1728
+  ],
+  "missingWidths": [],
+  "rubric": [
+    {
+      "id": "review-rules-visual-design",
+      "title": "Visual Design"
+    }
+  ],
+  "rubricStatus": "loaded"
+}

@@ -1,0 +1,55 @@
+{
+  "receipt": "Launchpad project deployment workflow implementation",
+  "actualAgentSessionSettings": {
+    "host": "codex",
+    "cliVersion": "0.149.0",
+    "model": "gpt-5.6-luna",
+    "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+    "history": "ephemeral",
+    "outputFormat": "jsonl",
+    "timeBudgetSeconds": 3600,
+    "mcp": {
+      "control": "none, enforced with --ignore-user-config and Apps/plugins disabled",
+      "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled"
+    }
+  },
+  "betterDesignMcpOperationsInOrder": [
+    "get-ui-principle(accessibility)",
+    "get-ux-principle(forms)",
+    "find-design-system",
+    "create-design-system",
+    "get-design-system-status",
+    "generated registry install",
+    "detect-icon-library",
+    "install-icons(Feather Icons)",
+    "get-ui-principle(spacing)",
+    "get-ux-principle(responsive)",
+    "get-review-rules",
+    "check-comprehension(overview)",
+    "check-comprehension(import repository)",
+    "check-comprehension(review configuration)",
+    "check-comprehension(deployment ready)",
+    "inspect-spacing(capture only)"
+  ],
+  "localCommands": [
+    {"command": "npx shadcn@latest add https://better-design.com/api/projects/35322221-026b-4e97-81b1-57524b9debbd/registry/all.json", "outcome": "passed; generated registry installed"},
+    {"command": "bun run typecheck", "outcome": "passed"},
+    {"command": "bun run lint", "outcome": "passed with one generated guardrail warning"},
+    {"command": "bun test", "outcome": "passed; 1 receipt sanity test"},
+    {"command": "bun run build", "outcome": "passed; Next.js emitted a nested-worktree turbopack root warning"}
+  ],
+  "filesChanged": ["components.json", "src/app/globals.css", "src/app/layout.tsx", "src/app/page.tsx", "src/components/icons/", "src/components/ui/", "src/lib/", "src/.better-design/", "benchmark/receipt.test.ts", "benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json"],
+  "betterDesign": {
+    "generatedProjectId": "35322221-026b-4e97-81b1-57524b9debbd",
+    "registryInstall": "succeeded",
+    "iconInstall": "succeeded",
+    "review": "completed; no critical or serious findings returned by source/copy review",
+    "comprehension": "completed; all four screen checks passed with no critical or serious findings",
+    "spacing": "incomplete: inspect-spacing capture script was returned, but connected existing Chrome integration was unavailable; no benchmark/spacing-states.json exists, so no rendered states were invented"
+  },
+  "limitations": [
+    "Connected Chrome integration was unavailable; no separate browser was launched and the required second inspect-spacing call at 1440, 1728, and 390 remains incomplete.",
+    "benchmark/spacing-states.json is absent, so the run remains invalid for spacing verification.",
+    "No browser-dependent workflow interaction was run because the connected Chrome integration was unavailable."
+  ]
+}

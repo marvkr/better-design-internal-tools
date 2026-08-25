@@ -1,0 +1,16 @@
+{
+  "receipt": "Formline intake-form workflow implementation",
+  "sessionSettings": { "host": "codex", "cliVersion": "0.149.0", "model": "gpt-5.6-luna", "permissionMode": "dangerously-bypass-approvals-and-sandbox", "history": "ephemeral", "outputFormat": "jsonl", "timeBudgetSeconds": 3600, "mcp": { "control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled" } },
+  "commands": [
+    { "command": "npx shadcn@latest add https://better-design.com/api/projects/97efccc9-d1e9-4db1-97a7-d2c29fc625da/registry/all.json", "outcome": "passed; generated registry installed; existing primitives overwritten by confirmation" },
+    { "command": "bun run typecheck", "outcome": "passed" },
+    { "command": "bun run lint", "outcome": "passed with one warning in generated src/.better-design/eslint-design-system.mjs" },
+    { "command": "bun test", "outcome": "no tests found; command exited 1" },
+    { "command": "bun run build", "outcome": "passed; Next.js production build completed" },
+    { "command": "git status --short", "outcome": "inspected changed files; no commit or push performed" }
+  ],
+  "filesChanged": ["benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json", "src/app/globals.css", "src/app/page.tsx", "src/components/icons/*", "src/components/ui/alert.tsx", "src/components/ui/avatar.tsx", "src/components/ui/badge.tsx", "src/components/ui/button.tsx", "src/components/ui/card.tsx", "src/components/ui/input.tsx", "src/components/ui/label.tsx", "src/components/ui/progress.tsx", "src/components/ui/select.tsx", "src/components/ui/separator.tsx", "src/components/ui/table.tsx", "src/components/ui/textarea.tsx", "src/components/ui/_shared.ts", "src/lib/utils.ts", "src/lib/better-design-guards.ts", "src/lib/motion.ts", "tsconfig.json"],
+  "betterDesign": { "reviewRules": "loaded", "comprehension": { "overview": "passed", "dataEntry": "passed", "completion": "passed" }, "inspectSpacing": "needs-capture; first call returned capture script" },
+  "toolLimitations": ["Connected Chrome integration was unavailable, so the supplied spacing capture script could not be run at 1440, 1728, or 390 widths; browser flow verification and completed inspect-spacing measurement remain incomplete."],
+  "notes": ["package.json and bun.lock were restored after the registry installer attempted dependency additions; package versions remain unchanged.", "No commit was created." ]
+}

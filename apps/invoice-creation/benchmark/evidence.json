@@ -1,0 +1,15 @@
+{
+  "receipt": "Ledgerly invoice creation implementation",
+  "actualAgentSessionSettings": { "host": "codex", "cliVersion": "0.149.0", "model": "gpt-5.6-luna", "permissionMode": "dangerously-bypass-approvals-and-sandbox", "history": "ephemeral", "outputFormat": "jsonl", "timeBudgetSeconds": 3600, "mcp": { "control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled" } },
+  "betterDesignMcpOperationsInOrder": ["get-ui-principle: previously recorded completed", "get-ux-principle: previously recorded completed", "find-design-system: previously recorded first-ranked Atelier selected", "create-design-system: previously recorded completed", "get-design-system-status: previously recorded completed after polling", "generated registry install: previously recorded completed", "get-review-rules: not available in continuation (MCP tools not exposed)", "check-comprehension: not available in continuation (MCP tools not exposed)", "inspect-spacing: not available (MCP tools and connected existing Chrome not exposed)"],
+  "localCommands": [
+    { "command": "bun run typecheck", "outcome": "passed" },
+    { "command": "bun run lint", "outcome": "passed" },
+    { "command": "bun test", "outcome": "passed; 1 test" },
+    { "command": "bun run build", "outcome": "passed; Next emitted only its existing repository-root warning" },
+    { "command": "rg -n 'lucide-react' src", "outcome": "passed; no matches" }
+  ],
+  "filesChanged": ["components.json", "src/app/globals.css", "src/app/page.tsx", "src/components/icons/", "src/components/ui/button.tsx", "src/components/ui/select.tsx", "src/lib/better-design-guards.ts", "src/lib/receipt.test.ts", "benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json"],
+  "toolLimitations": ["Better Design MCP tools were not exposed in this continuation; existing generated project and registry receipts were preserved as historical evidence.", "Connected existing-Chrome integration was not exposed and benchmark/spacing-states.json is absent; inspect-spacing cannot be truthfully completed."],
+  "verificationNotes": ["No files outside this standalone app were inspected or modified.", "The run remains invalid until Better Design review/comprehension and the two inspect-spacing calls are completed with the existing Chrome integration."]
+}

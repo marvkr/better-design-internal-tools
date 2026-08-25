@@ -1,0 +1,103 @@
+{
+  "slug": "refund-processing",
+  "name": "Customer refund processing",
+  "product": "Resolve",
+  "category": "Commerce operations",
+  "audience": "Finance and support teams",
+  "job": "Review an order and issue a documented partial refund.",
+  "nav": [
+    "Orders",
+    "Customers",
+    "Refunds",
+    "Reports"
+  ],
+  "activeNav": "Orders",
+  "stats": [
+    {
+      "label": "Orders today",
+      "value": "184"
+    },
+    {
+      "label": "Refund requests",
+      "value": "12"
+    },
+    {
+      "label": "Refunded this week",
+      "value": "$4,820"
+    }
+  ],
+  "records": [
+    {
+      "title": "Order #8421",
+      "detail": "Nora Bennett",
+      "meta": "$184.00 · 3 items",
+      "status": "Refund requested"
+    },
+    {
+      "title": "Order #8418",
+      "detail": "Leo Martin",
+      "meta": "$68.00 · 1 item",
+      "status": "Fulfilled"
+    },
+    {
+      "title": "Order #8397",
+      "detail": "Ava Wilson",
+      "meta": "$240.00 · 4 items",
+      "status": "Partially refunded"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Order",
+      "placeholder": "#8421"
+    },
+    {
+      "label": "Item",
+      "placeholder": "Canvas field bag",
+      "type": "select",
+      "options": [
+        "Canvas field bag",
+        "Packing cubes",
+        "Travel wallet"
+      ]
+    },
+    {
+      "label": "Amount",
+      "placeholder": "89.00",
+      "type": "number"
+    },
+    {
+      "label": "Reason",
+      "placeholder": "Item arrived damaged",
+      "type": "select",
+      "options": [
+        "Damaged",
+        "Wrong item",
+        "Changed mind",
+        "Other"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Refund requests",
+      "description": "Review orders that need a refund decision.",
+      "action": "Open request"
+    },
+    {
+      "title": "Order review",
+      "description": "Confirm the item, payment, and customer history.",
+      "action": "Choose refund"
+    },
+    {
+      "title": "Review refund",
+      "description": "Check the amount, reason, and customer notification.",
+      "action": "Issue refund"
+    },
+    {
+      "title": "Refund issued",
+      "description": "$89.00 will return to Nora's original payment method.",
+      "action": "View refund"
+    }
+  ]
+}

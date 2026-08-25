@@ -1,0 +1,7 @@
+{
+  "library": "iconoir",
+  "prefix": "iconoir",
+  "source": "iconify",
+  "installedAt": "2026-08-24T15:19:16.184Z",
+  "icons": ["arrow-left", "arrow-right", "book", "calendar", "check", "folder", "home-simple-door", "menu", "page-edit", "refresh-double"]
+}

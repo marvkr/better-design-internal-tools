@@ -1,0 +1,78 @@
+"use client";
+import { OnboardingStepper } from "@/components/ui/ix-onboarding-stepper";
+import benchmarkFixture from "../../benchmark/fixture.json";
+import { useRef, useState } from "react";
+import { ActivityIcon, ArrowLeftIcon, ArrowRightIcon, CheckIcon, HomeIcon, PlusIcon, RefreshIcon, ViewGridIcon, WarningTriangleIcon } from "@/components/icons";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { NativeSelect } from "@/components/ui/native-select";
+import { Progress } from "@/components/ui/progress";
+import { Textarea } from "@/components/ui/textarea";
+
+type Step = 0 | 1 | 2 | 3;
+type FormValues = { name: string; channel: string; approver: string; reminder: string; note: string };
+type NavItem = "Home" | "Channels" | "Workflows" | "Activity";
+const nav = ["Home", "Channels", "Workflows", "Activity"] as const;
+const stats = [["Active workflows", "12"], ["Runs this week", "286"], ["Waiting approval", "8"]];
+const records = [["Campaign approval", "Marketing operations", "42 runs this month", "Active"], ["Access request", "IT operations", "96 runs this month", "Active"], ["Customer reference", "Sales operations", "18 runs this month", "Draft"]];
+const steps = [["Workflows", "Turn repeated team requests into clear, trackable processes."], ["Build the request", "Choose where requests start and what details people provide."], ["Review workflow", "Confirm the approver, reminder, and completion message."], ["Workflow published", "Campaign approval is ready for the marketing team."]];
+const initialValues: FormValues = { name: "", channel: "", approver: "", reminder: "", note: "" };
+const navIcons = { Home: HomeIcon, Channels: ViewGridIcon, Workflows: ViewGridIcon, Activity: ActivityIcon };
+
+
+
+
+
+function BenchmarkStepper({
+  currentStep,
+  onStepChange,
+}: {
+  currentStep: number;
+  onStepChange: (step: number) => void;
+}) {
+  const benchmarkSteps = benchmarkFixture.steps.map((item, index) => ({
+    id: String(index),
+    label: item.title,
+    title: item.title,
+    description: item.description,
+  }));
+
+  return (
+    <OnboardingStepper
+      steps={benchmarkSteps}
+      index={currentStep}
+      onIndexChange={(nextStep) => {
+        if (nextStep < currentStep) onStepChange(nextStep);
+      }}
+      progressStyle="segments"
+      labelMode="current"
+      progressLabel={benchmarkFixture.name + " progress"}
+      className="mb-8 shadow-none [&>div:nth-of-type(2)]:hidden [&>div:last-child]:hidden"
+    />
+  );
+}
+
+export default function Home() {
+  const [step, setStep] = useState<Step>(0); const [values, setValues] = useState<FormValues>(initialValues); const [errors, setErrors] = useState<Partial<Record<keyof FormValues, string>>>({}); const [activeNav, setActiveNav] = useState<NavItem>("Workflows");
+  const nameRef = useRef<HTMLInputElement>(null); const channelRef = useRef<HTMLSelectElement>(null);
+  const update = (field: keyof FormValues, value: string) => { setValues((current) => ({ ...current, [field]: value })); if (errors[field]) setErrors((current) => ({ ...current, [field]: undefined })); };
+  const validate = () => { const next: Partial<Record<keyof FormValues, string>> = {}; if (!values.name.trim()) next.name = "Enter a workflow name."; if (!values.channel) next.channel = "Choose a request channel."; if (!values.approver) next.approver = "Choose an approver."; if (!values.reminder) next.reminder = "Choose a reminder time."; setErrors(next); if (Object.keys(next).length) { window.requestAnimationFrame(() => (next.name ? nameRef.current : channelRef.current)?.focus()); return false; } return true; };
+  const moveTo = (next: Step) => { setStep(next); window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); };
+  const reset = () => { setValues(initialValues); setErrors({}); setActiveNav("Workflows"); moveTo(0); };
+  return <div className="min-h-screen bg-background text-foreground"><div className="mx-auto flex min-h-screen max-w-[1440px]">
+    <aside className="hidden w-64 shrink-0 gap-8 border-r border-border bg-card px-6 py-6 md:flex md:flex-col"><Button variant="ghost" className="h-12 justify-start px-3 text-lg font-semibold text-foreground" onClick={reset} aria-label="Ritual home"><span className="grid size-8 place-items-center rounded-xl bg-primary text-primary-foreground"><CheckIcon className="size-4" /></span>Ritual</Button><nav aria-label="Main navigation" className="space-y-1">{nav.map((item) => <NavButton key={item} item={item} active={activeNav === item} onClick={() => { setActiveNav(item); if (item === "Workflows") moveTo(step); }} />)}</nav><div className="rounded-xl bg-secondary p-4 text-sm text-muted-foreground"><p className="font-medium text-foreground">Keep requests moving</p><p className="mt-1 leading-5">Workflows keep approvals visible and easy to follow.</p></div></aside>
+    <main className="min-w-0 flex-1"><header className="flex min-h-16 items-center justify-between border-b border-border bg-card px-4 sm:px-8"><Button variant="ghost" className="h-11 px-2 text-lg font-semibold md:hidden" onClick={reset} aria-label="Ritual home">Ritual</Button><div className="hidden text-sm text-muted-foreground md:block">Collaboration operations</div><div className="flex items-center gap-2 text-sm text-muted-foreground"><span className="size-2 rounded-full bg-primary" aria-hidden="true" /> Team workspace</div></header>
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8 sm:py-8">{activeNav !== "Workflows" ? <OtherView item={activeNav} onBack={() => { setActiveNav("Workflows"); moveTo(step); }} /> : <><><StepHeader step={step} /><BenchmarkStepper currentStep={step} onStepChange={(nextStep) => setStep(nextStep as typeof step)} /></>{step === 0 && <Overview onStart={() => moveTo(1)} />}{step === 1 && <BuildForm values={values} errors={errors} nameRef={nameRef} channelRef={channelRef} update={update} onBack={() => moveTo(0)} onNext={() => validate() && moveTo(2)} />}{step === 2 && <Review values={values} onBack={() => moveTo(1)} onPublish={() => moveTo(3)} />}{step === 3 && <Complete values={values} onReset={reset} />}</>}</div>
+    </main></div></div>;
+}
+function NavButton({ item, active, onClick }: { item: NavItem; active: boolean; onClick: () => void }) { const Icon = navIcons[item]; return <Button variant={active ? "secondary" : "ghost"} className={`w-full justify-start ${active ? "text-foreground" : "text-muted-foreground"}`} aria-current={active ? "page" : undefined} onClick={onClick}><Icon className="size-4" />{item}</Button>; }
+function StepHeader({ step }: { step: Step }) { return <section aria-labelledby="page-title" className="mb-8"><div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"><div><h1 id="page-title" className="text-3xl font-semibold tracking-tight sm:text-4xl">{steps[step][0]}</h1><p className="mt-2 max-w-xl text-base leading-6 text-muted-foreground">{steps[step][1]}</p></div><div className="hidden" aria-hidden="true"><nav aria-label="Workflow progress" className="w-full max-w-xl"><ol className="grid grid-cols-4 gap-2">{steps.map(([title], index) => <li key={title} className="min-w-0"><div className={`mb-2 flex size-8 items-center justify-center rounded-full text-sm font-medium ${index <= step ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground"}`} aria-current={index === step ? "step" : undefined}>{index < step ? <CheckIcon className="size-4" /> : index + 1}</div><span className={`block whitespace-normal text-center text-xs leading-4 ${index === step ? "font-medium text-foreground" : "text-muted-foreground"}`}>{title}</span></li>)}</ol><Progress value={(step / 3) * 100} className="mt-3 h-1" aria-label={`${step + 1} of 4 steps complete`} /></nav></div></div></section>; }
+function Overview({ onStart }: { onStart: () => void }) { return <><div className="grid gap-3 sm:grid-cols-3">{stats.map(([label, value]) => <Card key={label}><CardContent className="p-4"><p className="text-sm text-muted-foreground">{label}</p><p className="mt-2 text-3xl font-semibold tracking-tight">{value}</p></CardContent></Card>)}</div><section aria-labelledby="recent-workflows" className="mt-8"><div className="mb-3 flex items-center justify-between"><h2 id="recent-workflows" className="text-xl font-semibold">Recent workflows</h2><Button variant="default" size="lg" onClick={onStart}><PlusIcon className="size-4" />Create workflow</Button></div><Card><CardContent className="p-0">{records.map(([title, detail, meta, status], index) => <div key={title} className={`flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between ${index < records.length - 1 ? "border-b border-border" : ""}`}><div><p className="font-medium">{title}</p><p className="mt-1 text-sm text-muted-foreground">{detail} <span className="mx-1 text-border">/</span> {meta}</p></div><Badge variant={status === "Active" ? "default" : "secondary"}>{status}</Badge></div>)}</CardContent></Card></section></>; }
+function BuildForm({ values, errors, nameRef, channelRef, update, onBack, onNext }: { values: FormValues; errors: Partial<Record<keyof FormValues, string>>; nameRef: React.RefObject<HTMLInputElement | null>; channelRef: React.RefObject<HTMLSelectElement | null>; update: (field: keyof FormValues, value: string) => void; onBack: () => void; onNext: () => void }) { return <form onSubmit={(event) => { event.preventDefault(); onNext(); }} noValidate className="max-w-3xl"><Card><CardHeader><CardTitle>Request details</CardTitle><p className="text-sm text-muted-foreground">Set the starting point and the person who approves each request.</p></CardHeader><CardContent className="space-y-5"><Field label="Workflow name" error={errors.name} htmlFor="workflow-name"><Input id="workflow-name" ref={nameRef} value={values.name} onChange={(event) => update("name", event.target.value)} placeholder="Campaign approval" aria-invalid={Boolean(errors.name)} aria-describedby={errors.name ? "workflow-name-error" : undefined} /></Field><Field label="Request channel" error={errors.channel} htmlFor="request-channel"><NativeSelect id="request-channel" ref={channelRef} value={values.channel} onChange={(event) => update("channel", event.target.value)} aria-invalid={Boolean(errors.channel)} aria-describedby={errors.channel ? "request-channel-error" : undefined}><option value="">Choose a channel</option><option>#marketing-ops</option><option>#it-help</option><option>#sales-ops</option></NativeSelect></Field><Field label="Approver" error={errors.approver} htmlFor="approver"><NativeSelect id="approver" value={values.approver} onChange={(event) => update("approver", event.target.value)} aria-invalid={Boolean(errors.approver)} aria-describedby={errors.approver ? "approver-error" : undefined}><option value="">Choose an approver</option><option>Campaign owner</option><option>Team lead</option><option>Legal reviewer</option></NativeSelect></Field><Field label="Reminder" error={errors.reminder} htmlFor="reminder"><NativeSelect id="reminder" value={values.reminder} onChange={(event) => update("reminder", event.target.value)} aria-invalid={Boolean(errors.reminder)} aria-describedby={errors.reminder ? "reminder-error" : undefined}><option value="">Choose a reminder</option><option>After 4 hours</option><option>After 24 hours</option><option>After 2 days</option></NativeSelect></Field><Field label="Internal note" hint="Optional" htmlFor="internal-note"><Textarea id="internal-note" value={values.note} onChange={(event) => update("note", event.target.value)} placeholder="Add context for the team" rows={3} /></Field></CardContent></Card><div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between"><Button type="button" variant="outline" size="lg" onClick={onBack}><ArrowLeftIcon className="size-4" />Back</Button><Button type="submit" size="lg">Review workflow<ArrowRightIcon className="size-4" /></Button></div></form>; }
+function Field({ label, hint, error, htmlFor, children }: { label: string; hint?: string; error?: string; htmlFor: string; children: React.ReactNode }) { return <div className="space-y-2"><div className="flex items-baseline justify-between gap-3"><Label htmlFor={htmlFor} className="text-base">{label}</Label>{hint && <span className="text-sm text-muted-foreground">{hint}</span>}</div>{children}{error && <p id={`${htmlFor}-error`} className="flex items-center gap-1.5 text-sm font-medium text-destructive"><WarningTriangleIcon className="size-4 shrink-0" />{error}</p>}</div>; }
+function Review({ values, onBack, onPublish }: { values: FormValues; onBack: () => void; onPublish: () => void }) { const rows = [["Workflow name", values.name], ["Request channel", values.channel], ["Approver", values.approver], ["Reminder", values.reminder]]; return <div className="max-w-3xl"><Card><CardHeader><CardTitle>Check before publishing</CardTitle><p className="text-sm text-muted-foreground">Your team will use these settings each time a request starts.</p></CardHeader><CardContent className="space-y-1">{rows.map(([label, value]) => <div key={label} className="flex flex-col gap-1 border-b border-border py-4 last:border-0 sm:flex-row sm:items-center sm:justify-between"><span className="text-sm text-muted-foreground">{label}</span><span className="font-medium sm:text-right">{value}</span></div>)}{values.note && <div className="rounded-xl bg-secondary p-4"><p className="text-sm text-muted-foreground">Internal note</p><p className="mt-1 whitespace-pre-wrap text-sm">{values.note}</p></div>}</CardContent></Card><div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between"><Button variant="outline" size="lg" onClick={onBack}><ArrowLeftIcon className="size-4" />Edit details</Button><Button size="lg" onClick={onPublish}>Publish workflow<CheckIcon className="size-4" /></Button></div></div>; }
+function Complete({ values, onReset }: { values: FormValues; onReset: () => void }) { const [started, setStarted] = useState(false); return <div className="max-w-3xl"><Card><CardContent className="flex flex-col items-start p-6 sm:p-8"><span className="mb-6 grid size-12 place-items-center rounded-full bg-accent text-accent-foreground"><CheckIcon className="size-6" /></span><h2 className="text-2xl font-semibold tracking-tight">Workflow published</h2><p className="mt-2 max-w-lg text-base leading-6 text-muted-foreground">{started ? "A new workflow run is ready to configure." : `${values.name} is ready for the marketing team. New requests will start in ${values.channel} and go to ${values.approver}.`}</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Button size="lg" onClick={() => setStarted(true)}>{started ? "Run configured" : "Run workflow"}<ArrowRightIcon className="size-4" /></Button><Button variant="outline" size="lg" onClick={onReset}><RefreshIcon className="size-4" />Create another</Button></div></CardContent></Card></div>; }
+function OtherView({ item, onBack }: { item: NavItem; onBack: () => void }) { return <div className="flex min-h-[50vh] max-w-xl flex-col justify-center"><h1 className="text-3xl font-semibold tracking-tight">{item}</h1><p className="mt-3 text-base leading-6 text-muted-foreground">{item} is outside this workflow setup. Return to Workflows to keep building your request process.</p><Button className="mt-6 w-fit" size="lg" onClick={onBack}><ArrowLeftIcon className="size-4" />Back to Workflows</Button></div>; }

@@ -1,0 +1,102 @@
+{
+  "slug": "crm-workflow",
+  "name": "CRM workflow setup",
+  "product": "Northstar",
+  "category": "Revenue operations",
+  "audience": "Sales operations teams",
+  "job": "Create a follow-up workflow that keeps qualified opportunities moving.",
+  "nav": [
+    "Companies",
+    "People",
+    "Deals",
+    "Workflows"
+  ],
+  "activeNav": "Workflows",
+  "stats": [
+    {
+      "label": "Active deals",
+      "value": "38"
+    },
+    {
+      "label": "Needs follow-up",
+      "value": "11"
+    },
+    {
+      "label": "Pipeline",
+      "value": "$284k"
+    }
+  ],
+  "records": [
+    {
+      "title": "Acme Works",
+      "detail": "Expansion · $32k",
+      "meta": "No activity for 4 days",
+      "status": "Follow up"
+    },
+    {
+      "title": "Orbit Health",
+      "detail": "New business · $46k",
+      "meta": "Call tomorrow",
+      "status": "Qualified"
+    },
+    {
+      "title": "Sora Labs",
+      "detail": "New business · $18k",
+      "meta": "Proposal viewed",
+      "status": "Proposal"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Workflow name",
+      "placeholder": "Qualified deal follow-up"
+    },
+    {
+      "label": "Trigger",
+      "placeholder": "Deal enters stage",
+      "type": "select",
+      "options": [
+        "Deal enters stage",
+        "Deal value changes",
+        "No activity"
+      ]
+    },
+    {
+      "label": "Stage",
+      "placeholder": "Qualified",
+      "type": "select",
+      "options": [
+        "Qualified",
+        "Proposal",
+        "Negotiation"
+      ]
+    },
+    {
+      "label": "Wait",
+      "placeholder": "2",
+      "type": "number"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Workflows",
+      "description": "Automate the follow-up work that protects pipeline momentum.",
+      "action": "Create workflow"
+    },
+    {
+      "title": "Choose a trigger",
+      "description": "Start when a deal enters the qualified stage.",
+      "action": "Add actions"
+    },
+    {
+      "title": "Review actions",
+      "description": "Wait two days, create a task, and notify the owner.",
+      "action": "Publish workflow"
+    },
+    {
+      "title": "Workflow published",
+      "description": "Qualified deal follow-up is active for new matching deals.",
+      "action": "View workflow"
+    }
+  ]
+}

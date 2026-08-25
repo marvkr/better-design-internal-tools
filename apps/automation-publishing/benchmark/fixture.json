@@ -1,0 +1,107 @@
+{
+  "slug": "automation-publishing",
+  "name": "Automation publishing",
+  "product": "Switchboard",
+  "category": "Business automation",
+  "audience": "Operations teams",
+  "job": "Connect a trigger and action, test the data, and publish the automation.",
+  "nav": [
+    "Automations",
+    "Runs",
+    "Connections",
+    "Templates"
+  ],
+  "activeNav": "Automations",
+  "stats": [
+    {
+      "label": "Active",
+      "value": "17"
+    },
+    {
+      "label": "Runs today",
+      "value": "1,284"
+    },
+    {
+      "label": "Errors",
+      "value": "6"
+    }
+  ],
+  "records": [
+    {
+      "title": "New lead → CRM",
+      "detail": "Web form to Northstar",
+      "meta": "428 runs this week",
+      "status": "Active"
+    },
+    {
+      "title": "Refund → Support note",
+      "detail": "Ledgerly to Harbor",
+      "meta": "92 runs this week",
+      "status": "Active"
+    },
+    {
+      "title": "Invoice overdue → Slack",
+      "detail": "Ledgerly to chat",
+      "meta": "3 errors",
+      "status": "Needs attention"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Automation name",
+      "placeholder": "New lead to CRM"
+    },
+    {
+      "label": "Trigger app",
+      "placeholder": "Formline",
+      "type": "select",
+      "options": [
+        "Formline",
+        "Ledgerly",
+        "Harbor"
+      ]
+    },
+    {
+      "label": "Trigger event",
+      "placeholder": "New response",
+      "type": "select",
+      "options": [
+        "New response",
+        "Invoice overdue",
+        "Ticket resolved"
+      ]
+    },
+    {
+      "label": "Action",
+      "placeholder": "Create CRM record",
+      "type": "select",
+      "options": [
+        "Create CRM record",
+        "Post message",
+        "Create task"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Automations",
+      "description": "Monitor active workflows and runs that need attention.",
+      "action": "Create automation"
+    },
+    {
+      "title": "Choose trigger and action",
+      "description": "Connect a new form response to a CRM record.",
+      "action": "Test automation"
+    },
+    {
+      "title": "Review test data",
+      "description": "Confirm the fields map correctly before going live.",
+      "action": "Publish automation"
+    },
+    {
+      "title": "Automation published",
+      "description": "New qualifying form responses now create CRM records.",
+      "action": "View automation"
+    }
+  ]
+}

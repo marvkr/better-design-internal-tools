@@ -1,0 +1,8 @@
+{
+  "library": "iconoir",
+  "prefix": "iconoir",
+  "source": "generated registry meta.iconLibrary",
+  "variant": "default",
+  "installedAt": "2026-08-24T19:49:27.906Z",
+  "icons": ["arrow-right", "calendar", "check", "menu", "page"]
+}

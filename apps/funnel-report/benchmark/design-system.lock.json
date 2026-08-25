@@ -1,0 +1,7 @@
+{
+  "baseDesignSystem": {"id": "instrument", "rank": 1, "url": "https://better-design.com/design-systems/instrument"},
+  "project": {"id": "7290c239-36e9-4040-82b7-431bf5134b87", "url": "https://better-design.com/projects/7290c239-36e9-4040-82b7-431bf5134b87", "previewUrl": "https://better-design.com/preview/3e83d074-0b60-42fb-be84-b476f3537a77", "name": "sharp-hair"},
+  "registry": {"url": "https://better-design.com/api/projects/7290c239-36e9-4040-82b7-431bf5134b87/registry/all.json", "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/7290c239-36e9-4040-82b7-431bf5134b87/registry/all.json --yes --overwrite", "status": "installed"},
+  "operations": ["get-ui-principle(accessibility, spacing, typography)", "get-ux-principle(forms, interaction-patterns, responsive)", "find-design-system", "create-design-system", "get-design-system-status(poll until completed)", "generated registry install", "detect-icon-library", "find-icon-library", "find-icons", "install-icons", "get-review-rules", "check-comprehension", "inspect-spacing(capture script only; browser capture unavailable)"],
+  "installedFiles": {"tokens": "src/app/globals.css", "components": "src/components/ui/*", "guards": ["src/.better-design/rules.md", "src/.better-design/eslint-design-system.mjs", "src/lib/better-design-guards.ts", "src/lib/motion.ts"]}
+}

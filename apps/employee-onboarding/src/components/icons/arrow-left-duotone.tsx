@@ -1,0 +1,2 @@
+import type { SVGProps } from "react";
+export function ArrowLeftDuotoneIcon(props: SVGProps<SVGSVGElement>) { return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}><path fill="currentColor" opacity=".2" d="M112 56v144l-72-72Z"/><path fill="currentColor" d="M216 120h-96V56a8 8 0 0 0-13.66-5.66l-72 72a8 8 0 0 0 0 11.32l72 72A8 8 0 0 0 120 200v-64h96a8 8 0 0 0 0-16m-112 60.69L51.31 128L104 75.31Z"/></svg>; }

@@ -1,0 +1,11 @@
+{
+  "generatedProjectId": "97efccc9-d1e9-4db1-97a7-d2c29fc625da",
+  "assignmentSource": "generated registry metadata",
+  "library": "iconoir",
+  "provider": "iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-left", "arrow-right", "check", "clipboard-check", "copy", "group", "home", "list", "menu", "nav-arrow-down", "nav-arrow-up", "plus", "refresh", "settings", "warning-circle"],
+  "manifest": "src/components/icons/.library.json",
+  "componentDirectory": "src/components/icons",
+  "componentFiles": ["index.ts", "shared.tsx", "home.tsx", "list.tsx", "group.tsx", "settings.tsx", "arrow-left.tsx", "arrow-right.tsx", "check.tsx", "copy.tsx", "refresh.tsx", "warning-circle.tsx", "plus.tsx", "menu.tsx", "clipboard-check.tsx", "nav-arrow-down.tsx", "nav-arrow-up.tsx"]
+}

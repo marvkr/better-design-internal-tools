@@ -1,0 +1,12 @@
+{
+  "projectId": "d1f47d85-83df-4ab8-9b65-699b45cab4d2",
+  "assignmentSource": "generated registry status meta.iconLibrary / install guidance",
+  "library": "phosphor",
+  "provider": "iconify",
+  "prefix": "ph",
+  "variant": "duotone",
+  "installedIconNames": ["arrow-left-duotone", "arrow-right-duotone", "calendar-duotone", "check-circle-duotone", "file-text-duotone", "house-duotone", "note-duotone", "users-duotone"],
+  "manifest": "src/components/icons/.library.json",
+  "componentFiles": "src/components/icons/*.tsx",
+  "installTarget": "src/components/icons"
+}
