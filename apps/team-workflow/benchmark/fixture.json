@@ -1,0 +1,107 @@
+{
+  "slug": "team-workflow",
+  "name": "Team-workflow creation",
+  "product": "Ritual",
+  "category": "Collaboration operations",
+  "audience": "Cross-functional teams",
+  "job": "Create a recurring request workflow that gathers approvals in one place.",
+  "nav": [
+    "Home",
+    "Channels",
+    "Workflows",
+    "Activity"
+  ],
+  "activeNav": "Workflows",
+  "stats": [
+    {
+      "label": "Active workflows",
+      "value": "12"
+    },
+    {
+      "label": "Runs this week",
+      "value": "286"
+    },
+    {
+      "label": "Waiting approval",
+      "value": "8"
+    }
+  ],
+  "records": [
+    {
+      "title": "Campaign approval",
+      "detail": "Marketing operations",
+      "meta": "42 runs this month",
+      "status": "Active"
+    },
+    {
+      "title": "Access request",
+      "detail": "IT operations",
+      "meta": "96 runs this month",
+      "status": "Active"
+    },
+    {
+      "title": "Customer reference",
+      "detail": "Sales operations",
+      "meta": "18 runs this month",
+      "status": "Draft"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Workflow name",
+      "placeholder": "Campaign approval"
+    },
+    {
+      "label": "Request channel",
+      "placeholder": "#marketing-ops",
+      "type": "select",
+      "options": [
+        "#marketing-ops",
+        "#it-help",
+        "#sales-ops"
+      ]
+    },
+    {
+      "label": "Approver",
+      "placeholder": "Campaign owner",
+      "type": "select",
+      "options": [
+        "Campaign owner",
+        "Team lead",
+        "Legal reviewer"
+      ]
+    },
+    {
+      "label": "Reminder",
+      "placeholder": "After 24 hours",
+      "type": "select",
+      "options": [
+        "After 4 hours",
+        "After 24 hours",
+        "After 2 days"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Workflows",
+      "description": "Turn repeated team requests into clear, trackable processes.",
+      "action": "Create workflow"
+    },
+    {
+      "title": "Build the request",
+      "description": "Choose where requests start and what details people provide.",
+      "action": "Add approval"
+    },
+    {
+      "title": "Review workflow",
+      "description": "Confirm the approver, reminder, and completion message.",
+      "action": "Publish workflow"
+    },
+    {
+      "title": "Workflow published",
+      "description": "Campaign approval is ready for the marketing team.",
+      "action": "Run workflow"
+    }
+  ]
+}

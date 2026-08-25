@@ -1,0 +1,11 @@
+{
+  "base": { "id": "marigold", "name": "Marigold", "rank": 1, "url": "https://better-design.com/design-systems/marigold" },
+  "projectId": "d1f47d85-83df-4ab8-9b65-699b45cab4d2",
+  "projectUrl": "https://better-design.com/projects/d1f47d85-83df-4ab8-9b65-699b45cab4d2",
+  "previewUrl": "https://better-design.com/preview/c4ff388a-676d-467a-a981-675a329e7ea2",
+  "registryUrl": "https://better-design.com/api/projects/d1f47d85-83df-4ab8-9b65-699b45cab4d2/registry/all.json",
+  "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/d1f47d85-83df-4ab8-9b65-699b45cab4d2/registry/all.json --yes",
+  "iconAssignment": { "library": "Phosphor", "libraryId": "ph", "variant": "duotone", "source": "generated registry status" },
+  "mcpOperations": ["get-ui-principle", "get-ux-principle", "find-design-system", "create-design-system", "get-design-system-status", "find-icon-library", "find-icons", "install-icons", "get-review-rules", "check-comprehension", "inspect-spacing"],
+  "installedFiles": { "generatedRegistry": "src/components/ui/* (200 files) and src/lib/*", "feature": ["src/app/page.tsx", "src/app/globals.css", "src/app/layout.tsx"], "guardrails": ["src/.better-design/rules.md", "src/.better-design/eslint-design-system.mjs"] }
+}

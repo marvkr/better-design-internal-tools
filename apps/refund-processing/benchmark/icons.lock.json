@@ -1,0 +1,10 @@
+{
+  "generatedProjectId":"e1c4e095-9aa6-4280-b3a2-0964c7633cd3",
+  "assignmentSource":"generated registry meta.iconLibrary",
+  "library":"carbon",
+  "provider":"iconify",
+  "variant":"default",
+  "installedIconNames":["arrow-left","arrow-right","chart-line","checkmark","chevron-down","package","receipt","restart","user-multiple"],
+  "manifestFile":"src/components/icons/.library.json",
+  "componentFiles":["src/components/icons/index.ts","src/components/icons/arrow-left.tsx","src/components/icons/arrow-right.tsx","src/components/icons/chart-line.tsx","src/components/icons/checkmark.tsx","src/components/icons/chevron-down.tsx","src/components/icons/package.tsx","src/components/icons/receipt.tsx","src/components/icons/restart.tsx","src/components/icons/user-multiple.tsx"]
+}

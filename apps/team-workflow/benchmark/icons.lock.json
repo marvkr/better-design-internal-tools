@@ -1,0 +1,10 @@
+{
+  "generatedProjectId": "8f5baaf6-31b4-44b9-8653-1dca026a3b4b",
+  "assignmentSource": "Generated registry metadata and project status response",
+  "library": "iconoir",
+  "provider": "Iconify",
+  "variant": "default",
+  "installedIconNames": ["activity", "arrow-left", "arrow-right", "check", "home", "plus", "refresh", "view-grid", "warning-triangle"],
+  "manifestFile": "src/components/icons/.library.json",
+  "componentFiles": ["src/components/icons/activity.tsx", "src/components/icons/arrow-left.tsx", "src/components/icons/arrow-right.tsx", "src/components/icons/check.tsx", "src/components/icons/home.tsx", "src/components/icons/index.ts", "src/components/icons/plus.tsx", "src/components/icons/refresh.tsx", "src/components/icons/view-grid.tsx", "src/components/icons/warning-triangle.tsx"]
+}

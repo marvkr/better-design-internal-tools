@@ -1,0 +1,107 @@
+{
+  "slug": "funnel-report",
+  "name": "Funnel-report creation",
+  "product": "Signal",
+  "category": "Product analytics",
+  "audience": "Product and growth teams",
+  "job": "Build and save a conversion funnel for a key activation journey.",
+  "nav": [
+    "Home",
+    "Charts",
+    "Dashboards",
+    "Data"
+  ],
+  "activeNav": "Charts",
+  "stats": [
+    {
+      "label": "Activation",
+      "value": "38.4%"
+    },
+    {
+      "label": "Weekly users",
+      "value": "18.2k"
+    },
+    {
+      "label": "Tracked events",
+      "value": "64"
+    }
+  ],
+  "records": [
+    {
+      "title": "Workspace activation",
+      "detail": "4-step funnel",
+      "meta": "Updated today",
+      "status": "38.4%"
+    },
+    {
+      "title": "Invite conversion",
+      "detail": "3-step funnel",
+      "meta": "Updated yesterday",
+      "status": "62.1%"
+    },
+    {
+      "title": "Report retention",
+      "detail": "Weekly cohort",
+      "meta": "Updated 12 Aug",
+      "status": "44.8%"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Chart name",
+      "placeholder": "Workspace activation"
+    },
+    {
+      "label": "Step 1",
+      "placeholder": "Signed up",
+      "type": "select",
+      "options": [
+        "Signed up",
+        "Created workspace",
+        "Invited teammate"
+      ]
+    },
+    {
+      "label": "Step 2",
+      "placeholder": "Created workspace",
+      "type": "select",
+      "options": [
+        "Created workspace",
+        "Invited teammate",
+        "Published report"
+      ]
+    },
+    {
+      "label": "Date range",
+      "placeholder": "Last 30 days",
+      "type": "select",
+      "options": [
+        "Last 7 days",
+        "Last 30 days",
+        "Last quarter"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Charts",
+      "description": "Track activation, retention, and the paths users take.",
+      "action": "Create chart"
+    },
+    {
+      "title": "Define the funnel",
+      "description": "Choose the events that make up workspace activation.",
+      "action": "Run analysis"
+    },
+    {
+      "title": "Review inputs",
+      "description": "Check the funnel name, events, and date range.",
+      "action": "Save to dashboard"
+    },
+    {
+      "title": "Chart saved",
+      "description": "Workspace activation is now visible on the Growth dashboard.",
+      "action": "View dashboard"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "baseDesignSystem": {
+    "rank": 1,
+    "id": "interior",
+    "name": "Interior",
+    "previewUrl": "https://better-design.com/design-systems/interior"
+  },
+  "generatedProject": {
+    "id": "d5de8d43-b450-4160-9d92-1b52d6cfff30",
+    "name": "melodic-pizza",
+    "projectUrl": "https://better-design.com/projects/d5de8d43-b450-4160-9d92-1b52d6cfff30",
+    "previewUrl": "https://better-design.com/preview/0f80d69b-2761-42fe-96df-bc3c4d20586b",
+    "registryUrl": "https://better-design.com/api/projects/d5de8d43-b450-4160-9d92-1b52d6cfff30/registry/all.json",
+    "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/d5de8d43-b450-4160-9d92-1b52d6cfff30/registry/all.json --yes --overwrite"
+  },
+  "operations": [
+    "find-design-system(query: Countersign legal operations internal tool)",
+    "get-ui-principle(responsive enterprise workflow)",
+    "get-ux-principle(multi-step form workflow)",
+    "create-design-system(baseDesignSystemId: interior)",
+    "get-design-system-status(projectId: d5de8d43-b450-4160-9d92-1b52d6cfff30) -> generating",
+    "get-design-system-status(projectId: d5de8d43-b450-4160-9d92-1b52d6cfff30) -> completed",
+    "get-design-system-kit(target: react) via generated registry install",
+    "detect-icon-library -> iconoir/default",
+    "get-review-rules",
+    "check-comprehension -> overview pass; review pass",
+    "inspect-spacing -> completed, score 100/100 at 390, 1440, 1728"
+  ],
+  "installedFiles": [
+    "src/app/globals.css",
+    "src/.better-design/rules.md",
+    "src/.better-design/eslint-design-system.mjs",
+    "src/lib/motion.ts",
+    "src/components/ui/* generated registry primitives",
+    "components.json"
+  ]
+}

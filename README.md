@@ -1,49 +1,51 @@
 # Better Design internal tools
 
-Fifteen open-source internal-tool flows built by an AI coding agent with the
-Better Design MCP. Each flow is a bounded, responsive workflow with four
-screens: overview, input, review, and completion.
+Fourteen open-source internal-tool flows built by an AI coding agent with the
+Better Design MCP. Each app is a standalone, responsive four-step workflow
+with working interactions and realistic content.
 
 This repository is the public **after** side of a controlled before-and-after
 benchmark. The private baseline receives the same prompt, fixtures,
 dependencies, and time budget. Only this build receives Better Design MCP
 guidance, generated or selected design systems, review rules, and icons.
 
-## Flows
+## Standalone apps
 
-1. Issue triage
-2. Invoice creation
+1. Agreement review and signing
+2. Automation publishing
 3. CRM workflow publishing
-4. Support inbox triage
-5. Internal meeting scheduling
-6. Newsletter creation
-7. Project deployment
-8. Intake form creation
-9. Automation publishing
-10. Funnel-report creation
-11. Agreement review and signing
-12. Employee onboarding
-13. Refund processing
+4. Employee onboarding
+5. Funnel-report creation
+6. Intake form creation
+7. Internal page publishing
+8. Invoice creation
+9. Internal meeting scheduling
+10. Newsletter creation
+11. Project deployment
+12. Refund processing
+13. Support inbox triage
 14. Team workflow creation
-15. Internal page publishing
+
+The Luna issue-triage treatment is paused and is not part of this release. Its
+placeholder remains under `apps/issue-triage`; no older treatment was
+substituted.
 
 ## Run locally
 
-    bun install
+    cd apps/agreement-signing
+    bun install --frozen-lockfile
     bun dev
 
-Open http://localhost:3000. The catalog links to every flow.
+Open http://localhost:3000. Replace `agreement-signing` with any listed app.
 
 ## Verify
 
-    bun test
-    bun run typecheck
-    bun run lint
-    bun run build
+    bun run verify:standalone
 
-The shared prompt is in benchmark/PROMPT.md. The MCP systems and public
-previews are recorded in benchmark/DESIGN-SYSTEMS.md. Use
-benchmark/RUBRIC.md for blind comparison.
+Each app keeps its prompt, fixture, session settings, design-system receipt,
+and review evidence under its own `benchmark` directory. The shared Stepper
+integration receipt is in `benchmark/STEPPER.md`. Use
+`benchmark/RUBRIC.md` for blind comparison.
 
 The UX screenshot corpus informed which common workflows to benchmark. Corpus
 screens, product branding, and copied assets are not included in either build.

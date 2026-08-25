@@ -1,0 +1,17 @@
+{
+  "projectId": "d5de8d43-b450-4160-9d92-1b52d6cfff30",
+  "assignmentSource": "generated registry meta.iconLibrary and get-design-system-status",
+  "library": "iconoir",
+  "provider": "iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-right", "calendar", "check", "menu", "page"],
+  "manifest": "src/components/icons/.library.json",
+  "componentFiles": [
+    "src/components/icons/arrow-right.tsx",
+    "src/components/icons/calendar.tsx",
+    "src/components/icons/check.tsx",
+    "src/components/icons/menu.tsx",
+    "src/components/icons/page.tsx",
+    "src/components/icons/index.ts"
+  ]
+}

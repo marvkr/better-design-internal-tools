@@ -1,0 +1,7 @@
+{
+  "baseSelection": {"firstRankedId": "interior", "rank": 1, "previewUrl": "https://better-design.com/design-systems/interior"},
+  "generatedProject": {"projectId": "71c877da-4f5d-4b7c-90b2-f8ccf3ec8332", "projectUrl": "https://better-design.com/projects/71c877da-4f5d-4b7c-90b2-f8ccf3ec8332", "previewUrl": "https://better-design.com/preview/4b066301-5bf3-444a-a9d2-f12a53bfccde", "status": "completed"},
+  "registry": {"url": "https://better-design.com/api/projects/71c877da-4f5d-4b7c-90b2-f8ccf3ec8332/registry/all.json", "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/71c877da-4f5d-4b7c-90b2-f8ccf3ec8332/registry/all.json", "iconLibraryAssignment": {"library": "Iconoir", "libraryId": "iconoir", "prefix": "iconoir", "variant": "default"}, "installed": true},
+  "mcpOperations": ["get-ui-principle", "get-ux-principle", "find-design-system", "create-design-system", "get-design-system-status", "find-icon-library", "find-icons", "install-icons", "get-review-rules", "check-comprehension", "inspect-spacing"],
+  "installedFiles": ["src/app/globals.css", "src/components/ui/alert.tsx", "src/components/ui/badge.tsx", "src/components/ui/button.tsx", "src/components/ui/card.tsx", "src/components/ui/input.tsx", "src/components/ui/label.tsx", "src/components/ui/select.tsx", "src/components/ui/separator.tsx", "src/components/ui/textarea.tsx", "src/.better-design/rules.md", "src/.better-design/eslint-design-system.mjs"]
+}

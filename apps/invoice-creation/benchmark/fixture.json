@@ -1,0 +1,97 @@
+{
+  "slug": "invoice-creation",
+  "name": "Invoice creation",
+  "product": "Ledgerly",
+  "category": "Finance operations",
+  "audience": "Finance and account teams",
+  "job": "Create an accurate customer invoice and schedule it for delivery.",
+  "nav": [
+    "Overview",
+    "Invoices",
+    "Customers",
+    "Reports"
+  ],
+  "activeNav": "Invoices",
+  "stats": [
+    {
+      "label": "Outstanding",
+      "value": "$48,240"
+    },
+    {
+      "label": "Due soon",
+      "value": "8"
+    },
+    {
+      "label": "Overdue",
+      "value": "3"
+    }
+  ],
+  "records": [
+    {
+      "title": "Northwind Studio",
+      "detail": "INV-2048",
+      "meta": "$8,400 · Due 28 Aug",
+      "status": "Draft"
+    },
+    {
+      "title": "Fieldwork Labs",
+      "detail": "INV-2047",
+      "meta": "$12,900 · Due 22 Aug",
+      "status": "Sent"
+    },
+    {
+      "title": "Pine & Co.",
+      "detail": "INV-2046",
+      "meta": "$3,250 · Due 19 Aug",
+      "status": "Overdue"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Customer",
+      "placeholder": "Select a customer",
+      "type": "select",
+      "options": [
+        "Northwind Studio",
+        "Fieldwork Labs",
+        "Pine & Co."
+      ]
+    },
+    {
+      "label": "Service",
+      "placeholder": "Product design sprint"
+    },
+    {
+      "label": "Quantity",
+      "placeholder": "1",
+      "type": "number"
+    },
+    {
+      "label": "Unit price",
+      "placeholder": "8400",
+      "type": "number"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Invoices",
+      "description": "Track drafts, sent invoices, and overdue balances.",
+      "action": "New invoice"
+    },
+    {
+      "title": "Invoice details",
+      "description": "Choose the customer and add billable work.",
+      "action": "Review invoice"
+    },
+    {
+      "title": "Review and schedule",
+      "description": "Check the client and line item values.",
+      "action": "Schedule invoice"
+    },
+    {
+      "title": "Invoice scheduled",
+      "description": "INV-2049 will be sent to Northwind Studio tomorrow at 09:00.",
+      "action": "View invoice"
+    }
+  ]
+}

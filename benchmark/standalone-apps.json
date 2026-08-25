@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "collection": "after",
+  "appCount": 14,
+  "model": "gpt-5.6-luna",
+  "betterDesignMcpUsed": true,
+  "sharedRuntime": false,
+  "excluded": [
+    {
+      "slug": "issue-triage",
+      "reason": "The Luna treatment generation remains paused and is not included."
+    }
+  ],
+  "apps": [
+    "agreement-signing",
+    "automation-publishing",
+    "crm-workflow",
+    "employee-onboarding",
+    "funnel-report",
+    "intake-form",
+    "internal-publishing",
+    "invoice-creation",
+    "meeting-scheduling",
+    "newsletter-creation",
+    "project-deployment",
+    "refund-processing",
+    "support-inbox",
+    "team-workflow"
+  ]
+}

@@ -1,0 +1,567 @@
+{
+  "status": "completed",
+  "score": 20,
+  "summary": {
+    "critical": 0,
+    "serious": 5,
+    "moderate": 6,
+    "total": 11
+  },
+  "findings": [
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "viewport-1440 uses 6 off-scale spacing values across 11 elements: 6px, 20px, 36px, 40px, 631px, 794.59px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "button:nth-of-type(1)@5",
+        "div:nth-of-type(1)@25",
+        "div:nth-of-type(2)@33",
+        "div:nth-of-type(1)@36",
+        "div:nth-of-type(1)@38",
+        "div:nth-of-type(1)@63",
+        "div:nth-of-type(2)@70",
+        "div:nth-of-type(2)@76",
+        "div:nth-of-type(2)@82",
+        "div:nth-of-type(1)@83"
+      ],
+      "evidence": [
+        {
+          "label": "Primary navigation padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Signal home, reset funnel workflow margin bottom",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@25 margin top",
+          "value": 631,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@33 margin left",
+          "value": 794.59,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding top",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding bottom",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@38 row gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@38 column gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@70 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@70 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@76 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@76 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@82 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@82 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@83 margin top",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-1"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "viewport-1440",
+      "severity": "serious",
+      "message": "Primary navigation has inconsistent sibling gaps: 36px, 631px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "button:nth-of-type(1)@5",
+        "nav:nth-of-type(1)@10",
+        "div:nth-of-type(1)@25"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 631,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-2"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-1440",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@88 extends outside the 1440px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "div:nth-of-type(1)@88"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": -477.5,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 576.5,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 1440,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-3"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "Create chart measures 166.02x40px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@42"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 166.02,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-4"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "viewport-1728 uses 8 off-scale spacing values across 12 elements: 6px, 20px, 36px, 40px, 56px, 104px, 748px, 842.59px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "button:nth-of-type(1)@5",
+        "div:nth-of-type(1)@25",
+        "div:nth-of-type(1)@30",
+        "div:nth-of-type(2)@33",
+        "div:nth-of-type(1)@36",
+        "div:nth-of-type(1)@38",
+        "div:nth-of-type(1)@63",
+        "div:nth-of-type(2)@70",
+        "div:nth-of-type(2)@76",
+        "div:nth-of-type(2)@82",
+        "div:nth-of-type(1)@83"
+      ],
+      "evidence": [
+        {
+          "label": "Primary navigation padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Signal home, reset funnel workflow margin bottom",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@25 margin top",
+          "value": 748,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@30 margin right",
+          "value": 56,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@30 margin left",
+          "value": 56,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@33 margin left",
+          "value": 842.59,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding top",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 padding bottom",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 margin right",
+          "value": 104,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@36 margin left",
+          "value": 104,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@38 row gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@38 column gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@63 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@70 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@70 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@76 row gap",
+          "value": 6,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-5"
+    },
+    {
+      "ruleId": "spacing/sibling-gap-drift",
+      "state": "viewport-1728",
+      "severity": "serious",
+      "message": "Primary navigation has inconsistent sibling gaps: 36px, 748px.",
+      "fix": "Set one row or column gap token on the parent and remove competing child margins.",
+      "elementIds": [
+        "aside:nth-of-type(1)@4",
+        "button:nth-of-type(1)@5",
+        "nav:nth-of-type(1)@10",
+        "div:nth-of-type(1)@25"
+      ],
+      "evidence": [
+        {
+          "label": "Gap 1",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Gap 2",
+          "value": 748,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-6"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-1728",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@88 extends outside the 1728px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "div:nth-of-type(1)@88"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": -333.5,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 720.5,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 1728,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-7"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "Create chart measures 166.02x40px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@42"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 166.02,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-8"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "viewport-390 uses 5 off-scale spacing values across 8 elements: 6px, 20px, 28px, 40px, 200.31px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(2)@12",
+        "div:nth-of-type(1)@14",
+        "div:nth-of-type(1)@16",
+        "div:nth-of-type(1)@41",
+        "div:nth-of-type(2)@48",
+        "div:nth-of-type(2)@54",
+        "div:nth-of-type(2)@60",
+        "div:nth-of-type(1)@61"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(2)@12 margin left",
+          "value": 200.31,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@14 padding top",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@14 padding bottom",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@16 row gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@16 column gap",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@41 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@41 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@48 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@48 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@54 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@54 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@60 row gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(2)@60 column gap",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@61 margin top",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-9"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "div:nth-of-type(1)@66 extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "div:nth-of-type(1)@66"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": -238.75,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 102.25,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-10"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "Create chart measures 343x40px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@20"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 343,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 40,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-11"
+    }
+  ],
+  "capturedWidths": [
+    390,
+    1440,
+    1728
+  ],
+  "missingWidths": [],
+  "rubric": [
+    {
+      "id": "review-rules-visual-design",
+      "title": "Visual Design"
+    }
+  ],
+  "rubricStatus": "loaded"
+}

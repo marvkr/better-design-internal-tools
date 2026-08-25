@@ -1,0 +1,8 @@
+{
+  "library": "iconoir",
+  "prefix": "iconoir",
+  "source": "iconify",
+  "variant": "default",
+  "installedAt": "2026-08-24T19:51:38.131Z",
+  "icons": ["arrow-right", "building", "candlestick-chart", "check-circle", "flash", "nav-arrow-right", "plus", "refresh", "user"]
+}

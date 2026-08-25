@@ -1,0 +1,7 @@
+{
+  "library": "carbon",
+  "prefix": "carbon",
+  "source": "iconify",
+  "installedAt": "2026-08-24T20:03:33.347Z",
+  "icons": ["arrow-left", "chart-line", "checkmark-filled", "chevron-right", "dashboard", "data-table", "home", "reset"]
+}

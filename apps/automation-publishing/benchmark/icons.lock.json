@@ -1,0 +1,21 @@
+{
+  "generatedProjectId": "1571c16d-2af1-42c2-92e1-74587e00440e",
+  "assignmentSource": "get-design-system-status structuredContent/meta.iconLibrary",
+  "library": "Iconoir",
+  "libraryId": "iconoir",
+  "provider": "Iconify",
+  "variant": "default",
+  "installedIconNames": ["activity", "arrow-right", "check", "check-circle", "link", "nav-arrow-down", "refresh"],
+  "manifest": "src/components/icons/.library.json",
+  "manifestFile": "src/components/icons/.library.json",
+  "componentFiles": [
+    "src/components/icons/activity.tsx",
+    "src/components/icons/arrow-right.tsx",
+    "src/components/icons/check.tsx",
+    "src/components/icons/check-circle.tsx",
+    "src/components/icons/index.ts",
+    "src/components/icons/link.tsx",
+    "src/components/icons/nav-arrow-down.tsx",
+    "src/components/icons/refresh.tsx"
+  ]
+}

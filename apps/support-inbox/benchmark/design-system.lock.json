@@ -1,0 +1,24 @@
+{
+  "baseSelection": { "firstRankedId": "precision" },
+  "baseDesignSystemId": "precision",
+  "baseRank": 1,
+  "generatedProject": {
+    "projectId": "70f0f814-a756-4712-8ff3-ddb287646106",
+    "projectUrl": "https://better-design.com/projects/70f0f814-a756-4712-8ff3-ddb287646106",
+    "previewUrl": "https://better-design.com/preview/a502cc84-d83e-4f16-9707-471112ba5ef6"
+  },
+  "projectId": "70f0f814-a756-4712-8ff3-ddb287646106",
+  "projectUrl": "https://better-design.com/projects/70f0f814-a756-4712-8ff3-ddb287646106",
+  "previewUrl": "https://better-design.com/preview/a502cc84-d83e-4f16-9707-471112ba5ef6",
+  "registryUrl": "https://better-design.com/api/projects/70f0f814-a756-4712-8ff3-ddb287646106/registry/all.json",
+  "registry": {
+    "url": "https://better-design.com/api/projects/70f0f814-a756-4712-8ff3-ddb287646106/registry/all.json",
+    "installCommand": "npx shadcn@latest add -y -o https://better-design.com/api/projects/70f0f814-a756-4712-8ff3-ddb287646106/registry/all.json",
+    "iconLibraryAssignment": { "library": "Iconoir", "libraryId": "iconoir", "prefix": "iconoir", "variant": "default", "source": "generated design-system status" }
+  },
+  "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/70f0f814-a756-4712-8ff3-ddb287646106/registry/all.json",
+  "iconAssignment": { "library": "Iconoir", "libraryId": "iconoir", "prefix": "iconoir", "variant": "default", "source": "generated design-system status" },
+  "mcpOperations": ["get-ui-principle", "get-ux-principle", "find-design-system", "create-design-system", "get-design-system-status", "detect-icon-library", "find-icons", "install-icons", "get-review-rules", "check-comprehension", "inspect-spacing"],
+  "installedFiles": ["src/app/globals.css", "src/lib/motion.ts", "src/lib/better-design-guards.ts", "src/.better-design/rules.md", "src/.better-design/eslint-design-system.mjs", "src/components/ui/* (200 generated registry files; core primitives used by the workflow are badge, button, card, label, select, textarea)"],
+  "spacingMeasurement": { "status": "incomplete", "reason": "benchmark/spacing-states.json is absent and the connected Chrome integration is unavailable; the required capture script could not be evaluated, so no browser geometry was invented and no separate browser was launched." }
+}

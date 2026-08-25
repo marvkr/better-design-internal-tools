@@ -1,0 +1,7 @@
+{
+  "library": "iconoir",
+  "prefix": "iconoir",
+  "source": "iconify",
+  "installedAt": "2026-08-24T12:07:31.305Z",
+  "icons": ["arrow-left", "arrow-right", "calendar", "check", "chevron-down", "chevron-up", "home", "mail", "refresh"]
+}

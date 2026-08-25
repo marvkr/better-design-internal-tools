@@ -1,0 +1,13 @@
+{
+  "projectId": "0daa0835-61b7-4047-8a3c-ff014502ab5f",
+  "assignmentSource": "generated registry meta.iconLibrary",
+  "library": "Iconoir",
+  "libraryId": "iconoir",
+  "prefix": "iconoir",
+  "provider": "Iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-right", "building", "candlestick-chart", "check-circle", "flash", "nav-arrow-right", "plus", "refresh", "user"],
+  "manifest": "src/components/icons/.library.json",
+  "componentFiles": "src/components/icons/{arrow-right,building,candlestick-chart,check-circle,flash,nav-arrow-right,plus,refresh,user}.tsx",
+  "barrel": "src/components/icons/index.ts"
+}

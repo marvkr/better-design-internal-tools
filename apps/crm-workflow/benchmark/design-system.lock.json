@@ -1,0 +1,14 @@
+{
+  "baseDesignSystem": {"id": "precision", "rank": 1, "url": "https://better-design.com/design-systems/precision"},
+  "generatedProject": {
+    "id": "0daa0835-61b7-4047-8a3c-ff014502ab5f",
+    "projectUrl": "https://better-design.com/projects/0daa0835-61b7-4047-8a3c-ff014502ab5f",
+    "previewUrl": "https://better-design.com/preview/4d9562fc-4598-4a0d-93cd-f7b702d3025b",
+    "registryUrl": "https://better-design.com/api/projects/0daa0835-61b7-4047-8a3c-ff014502ab5f/registry/all.json",
+    "installCommand": "npx shadcn@latest add https://better-design.com/api/projects/0daa0835-61b7-4047-8a3c-ff014502ab5f/registry/all.json"
+  },
+  "iconAssignment": {"library": "Iconoir", "libraryId": "iconoir", "prefix": "iconoir", "variant": "default", "source": "generated registry meta.iconLibrary"},
+  "mcpOperations": ["find-design-system", "get-ui-principle", "get-ux-principle", "create-design-system", "get-design-system-status (polls: generating, generating, completed)", "detect-icon-library", "find-icons", "install-icons", "get-review-rules", "check-comprehension", "inspect-spacing (capture script only; no rendered states available)"],
+  "installedFiles": ["src/app/globals.css", "src/components/ui/* (generated registry primitives and optional components)", "src/lib/motion.ts", "src/lib/better-design-guards.ts", "src/.better-design/rules.md", "src/.better-design/eslint-design-system.mjs", "src/components/icons/* (owned Iconoir components)"],
+  "note": "The generated registry install completed successfully. Original package.json and bun.lock were restored because the benchmark forbids package-version changes; generated component dependencies remained available in the local install for verification."
+}

@@ -1,0 +1,7 @@
+{
+  "library":"ph",
+  "prefix":"ph",
+  "source":"iconify",
+  "variant":"duotone",
+  "icons":["arrow-left-duotone","arrow-right-duotone","calendar-duotone","chart-bar-duotone","check-duotone","clock-duotone","note-duotone","users-duotone","warning-circle-duotone","x-duotone"]
+}

@@ -1,0 +1,95 @@
+{
+  "slug": "project-deployment",
+  "name": "Project deployment",
+  "product": "Launchpad",
+  "category": "Developer operations",
+  "audience": "Software teams",
+  "job": "Import a repository, configure the build, and deploy it to production.",
+  "nav": [
+    "Projects",
+    "Deployments",
+    "Domains",
+    "Activity"
+  ],
+  "activeNav": "Deployments",
+  "stats": [
+    {
+      "label": "Projects",
+      "value": "12"
+    },
+    {
+      "label": "Deployments today",
+      "value": "28"
+    },
+    {
+      "label": "Failed",
+      "value": "1"
+    }
+  ],
+  "records": [
+    {
+      "title": "customer-portal",
+      "detail": "main · a19fd2c",
+      "meta": "Ready · 6 min ago",
+      "status": "Production"
+    },
+    {
+      "title": "docs",
+      "detail": "main · 812ce1a",
+      "meta": "Ready · 42 min ago",
+      "status": "Production"
+    },
+    {
+      "title": "admin-console",
+      "detail": "fix/exports · d91b771",
+      "meta": "Failed · 1 hr ago",
+      "status": "Preview"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Repository",
+      "placeholder": "acme/customer-portal"
+    },
+    {
+      "label": "Framework",
+      "placeholder": "Next.js",
+      "type": "select",
+      "options": [
+        "Next.js",
+        "Vite",
+        "Astro"
+      ]
+    },
+    {
+      "label": "Root directory",
+      "placeholder": "./"
+    },
+    {
+      "label": "Build command",
+      "placeholder": "bun run build"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Projects",
+      "description": "Monitor production projects and recent deployments.",
+      "action": "New project"
+    },
+    {
+      "title": "Import repository",
+      "description": "Choose the source repository and framework settings.",
+      "action": "Configure project"
+    },
+    {
+      "title": "Review configuration",
+      "description": "Confirm build settings and environment variables.",
+      "action": "Deploy project"
+    },
+    {
+      "title": "Deployment ready",
+      "description": "customer-portal is live and protected by automatic HTTPS.",
+      "action": "Visit deployment"
+    }
+  ]
+}

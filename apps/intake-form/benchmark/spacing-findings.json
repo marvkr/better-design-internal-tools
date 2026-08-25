@@ -1,0 +1,782 @@
+{
+  "status": "completed",
+  "score": 0,
+  "summary": {
+    "critical": 0,
+    "serious": 4,
+    "moderate": 15,
+    "total": 19
+  },
+  "findings": [
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "viewport-1440 uses 5 off-scale spacing values across 11 elements: 6px, 10px, 20px, 28px, 40px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(1)@3",
+        "nav:nth-of-type(1)@18",
+        "main:nth-of-type(1)@33",
+        "div:nth-of-type(1)@46",
+        "div:nth-of-type(1)@50",
+        "div:nth-of-type(1)@54",
+        "div:nth-of-type(1)@59",
+        "button:nth-of-type(1)@62",
+        "div:nth-of-type(1)@73",
+        "div:nth-of-type(1)@82",
+        "div:nth-of-type(1)@91"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(1)@3 padding right",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@3 padding left",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding top",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding right",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding bottom",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding left",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@50 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@50 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@50 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@50 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@54 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@54 padding right",
+          "value": 20,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-1"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "Step 1: Forms measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@40"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-2"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "Step 2: Build the form measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(2)@41"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-3"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "Step 3: Review and publish measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(3)@42"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-4"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1440",
+      "severity": "moderate",
+      "message": "Step 4: Form published measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(4)@43"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-5"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "viewport-1728 uses 6 off-scale spacing values across 13 elements: 6px, 10px, 20px, 28px, 40px, 136.5px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "div:nth-of-type(1)@3",
+        "div:nth-of-type(1)@16",
+        "nav:nth-of-type(1)@18",
+        "main:nth-of-type(1)@33",
+        "div:nth-of-type(1)@34",
+        "div:nth-of-type(1)@46",
+        "div:nth-of-type(1)@50",
+        "div:nth-of-type(1)@54",
+        "div:nth-of-type(1)@59",
+        "button:nth-of-type(1)@62",
+        "div:nth-of-type(1)@73",
+        "div:nth-of-type(1)@82",
+        "div:nth-of-type(1)@91"
+      ],
+      "evidence": [
+        {
+          "label": "div:nth-of-type(1)@3 padding right",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@3 padding left",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@3 margin right",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@3 margin left",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@16 margin right",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@16 margin left",
+          "value": 136.5,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "Primary navigation padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding top",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding right",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding bottom",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@33 padding left",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@34 margin right",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@34 margin left",
+          "value": 40,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@46 padding left",
+          "value": 20,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-6"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "Step 1: Forms measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@40"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-7"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "Step 2: Build the form measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(2)@41"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-8"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "Step 3: Review and publish measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(3)@42"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-9"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-1728",
+      "severity": "moderate",
+      "message": "Step 4: Form published measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(4)@43"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-10"
+    },
+    {
+      "ruleId": "spacing/off-scale-value",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "viewport-390 uses 4 off-scale spacing values across 9 elements: 6px, 10px, 20px, 28px.",
+      "fix": "Replace the measured values with the nearest project spacing token. Active scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128px.",
+      "elementIds": [
+        "main:nth-of-type(1)@30",
+        "div:nth-of-type(1)@43",
+        "div:nth-of-type(1)@47",
+        "div:nth-of-type(1)@51",
+        "div:nth-of-type(1)@56",
+        "button:nth-of-type(1)@59",
+        "div:nth-of-type(1)@69",
+        "div:nth-of-type(1)@77",
+        "div:nth-of-type(1)@85"
+      ],
+      "evidence": [
+        {
+          "label": "main:nth-of-type(1)@30 padding top",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "main:nth-of-type(1)@30 padding bottom",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@43 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@43 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@43 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@43 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@47 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@47 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@47 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@47 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@51 padding top",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@51 padding right",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@51 padding bottom",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@51 padding left",
+          "value": 20,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@56 margin bottom",
+          "value": 6,
+          "unit": "px"
+        },
+        {
+          "label": "Create form padding right",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "Create form padding left",
+          "value": 28,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@69 padding right",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@69 padding left",
+          "value": 10,
+          "unit": "px"
+        },
+        {
+          "label": "div:nth-of-type(1)@69 row gap",
+          "value": 6,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-11"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "Settings extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "button:nth-of-type(4)@26"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": 385.55,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 496.22,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-12"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "svg:nth-of-type(1)@27 extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "svg:nth-of-type(1)@27"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": 397.55,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 417.55,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-13"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "circle:nth-of-type(1)@28 extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "circle:nth-of-type(1)@28"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": 405.05,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 410.05,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-14"
+    },
+    {
+      "ruleId": "spacing/viewport-overflow",
+      "state": "viewport-390",
+      "severity": "serious",
+      "message": "path:nth-of-type(1)@29 extends outside the 390px viewport.",
+      "fix": "Constrain the element to the viewport and verify the same content at narrow and wide breakpoints.",
+      "elementIds": [
+        "path:nth-of-type(1)@29"
+      ],
+      "evidence": [
+        {
+          "label": "Left edge",
+          "value": 400.05,
+          "unit": "px"
+        },
+        {
+          "label": "Right edge",
+          "value": 415.05,
+          "unit": "px"
+        },
+        {
+          "label": "Viewport width",
+          "value": 390,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-15"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "Step 1: Forms measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(1)@37"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-16"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "Step 2: Build the form measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(2)@38"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-17"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "Step 3: Review and publish measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(3)@39"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-18"
+    },
+    {
+      "ruleId": "spacing/touch-target",
+      "state": "viewport-390",
+      "severity": "moderate",
+      "message": "Step 4: Form published measures 36x36px, below the recommended 44x44px touch target.",
+      "fix": "Increase the interactive hit area to at least 44x44px without relying on the visible icon size.",
+      "elementIds": [
+        "button:nth-of-type(4)@40"
+      ],
+      "evidence": [
+        {
+          "label": "Width",
+          "value": 36,
+          "unit": "px"
+        },
+        {
+          "label": "Height",
+          "value": 36,
+          "unit": "px"
+        }
+      ],
+      "id": "spacing-19"
+    }
+  ],
+  "capturedWidths": [
+    390,
+    1440,
+    1728
+  ],
+  "missingWidths": [],
+  "rubric": [
+    {
+      "id": "review-rules-visual-design",
+      "title": "Visual Design"
+    }
+  ],
+  "rubricStatus": "loaded"
+}

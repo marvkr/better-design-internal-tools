@@ -1,0 +1,11 @@
+{
+  "projectId": "7290c239-36e9-4040-82b7-431bf5134b87",
+  "assignmentSource": "generated project status response",
+  "library": "carbon",
+  "provider": "iconify",
+  "variant": "default",
+  "installedIconNames": ["arrow-left", "chart-line", "checkmark-filled", "chevron-right", "dashboard", "data-table", "home", "reset"],
+  "manifest": "src/components/icons/.library.json",
+  "componentFiles": "src/components/icons/*.tsx",
+  "barrel": "src/components/icons/index.ts"
+}

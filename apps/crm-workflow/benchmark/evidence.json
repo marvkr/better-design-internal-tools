@@ -1,0 +1,35 @@
+{
+  "receipt": "CRM workflow setup implementation",
+  "agentSessionSettings": {
+    "host": "codex",
+    "cliVersion": "0.149.0",
+    "model": "gpt-5.6-luna",
+    "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+    "history": "ephemeral",
+    "outputFormat": "jsonl",
+    "timeBudgetSeconds": 3600,
+    "mcp": "better-design HTTP MCP only"
+  },
+  "commands": [
+    {"command": "npx shadcn@latest add https://better-design.com/api/projects/0daa0835-61b7-4047-8a3c-ff014502ab5f/registry/all.json", "outcome": "passed; generated registry installed"},
+    {"command": "bun run typecheck", "outcome": "passed"},
+    {"command": "bun run lint", "outcome": "passed"},
+    {"command": "bun test", "outcome": "no tests found; command exited non-zero because the repository contains no test files"},
+    {"command": "bun run build", "outcome": "passed; production build completed (Next.js emitted its workspace-root warning)"}
+  ],
+  "betterDesignOperations": [
+    "find-design-system: selected first-ranked precision",
+    "get-ui-principle: accessibility, hierarchy",
+    "get-ux-principle: forms, navigation, responsive",
+    "create-design-system: project 0daa0835-61b7-4047-8a3c-ff014502ab5f",
+    "get-design-system-status: polled until completed",
+    "detect-icon-library: no prior manifest",
+    "find-icons/install-icons: Iconoir default; nine owned components",
+    "get-review-rules: completed",
+    "check-comprehension: all four screen checks passed",
+    "inspect-spacing: first call returned capture script; measurement incomplete"
+  ],
+  "filesChanged": ["components.json", "eslint.config.mjs", "src/app/globals.css", "src/app/layout.tsx", "src/app/page.tsx", "src/components/icons/*", "src/components/ui/* generated registry files", "src/lib/utils.ts", "src/lib/motion.ts", "src/lib/better-design-guards.ts", "src/.better-design/*", "benchmark/design-system.lock.json", "benchmark/icons.lock.json", "benchmark/evidence.json"],
+  "toolLimitations": ["No connected Chrome integration or browser tool was available in this run, so the required real-browser flow verification and inspect-spacing captures at 1440, 1728, and 390 widths could not be completed. No separate browser was launched."],
+  "scopeNote": "benchmark/fixture.json, benchmark/acceptance.json, benchmark/session-settings.json, package.json, and bun.lock were not changed."
+}

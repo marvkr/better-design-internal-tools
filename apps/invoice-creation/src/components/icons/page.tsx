@@ -1,0 +1,2 @@
+import type { SVGProps } from "react";
+export function PageIcon(props: SVGProps<SVGSVGElement>) { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d="M4 21.4V2.6a.6.6 0 0 1 .6-.6h11.7L20 5.8v15.6a.6.6 0 0 1-.6.6H4.6a.6.6 0 0 1-.6-.6M16 2v3.4a.6.6 0 0 0 .6.6H20M8 10h8M8 14h4M8 18h8" /></svg>; }

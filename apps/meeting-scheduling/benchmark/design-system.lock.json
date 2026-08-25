@@ -1,0 +1,7 @@
+{
+  "baseSelection":{"firstRankedId":"marigold","name":"Marigold","rank":1,"previewUrl":"https://better-design.com/design-systems/marigold"},
+  "generatedProject":{"projectId":"49aa984c-0715-4bd5-8dfb-ade16671a13d","projectUrl":"https://better-design.com/projects/49aa984c-0715-4bd5-8dfb-ade16671a13d","previewUrl":"https://better-design.com/preview/3afcd63a-008f-4157-9c13-16272d9304b8","status":"complete"},
+  "registry":{"url":"https://better-design.com/api/projects/49aa984c-0715-4bd5-8dfb-ade16671a13d/registry/all.json","installCommand":"npx shadcn@latest add https://better-design.com/api/projects/49aa984c-0715-4bd5-8dfb-ade16671a13d/registry/all.json","iconLibraryAssignment":{"library":"Phosphor","provider":"Iconify","prefix":"ph","variant":"duotone"},"installed":true},
+  "mcpOperations":["get-ui-principle","get-ux-principle","find-design-system","create-design-system","get-design-system-status","generated-registry-install","find-icon-library","find-icons","install-icons","get-review-rules","check-comprehension","inspect-spacing (first call, capture script only)"],
+  "installedFiles":["src/components/ui/*","src/lib/motion.ts","src/lib/utils.ts","src/.better-design/rules.md","src/.better-design/eslint-design-system.mjs","src/components/icons/index.tsx","src/components/icons/.library.json"]
+}

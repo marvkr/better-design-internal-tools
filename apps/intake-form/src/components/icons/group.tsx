@@ -1,0 +1,1 @@
+import type { IconProps } from "./shared"; import { IconBase } from "./shared"; export function GroupIcon(p: IconProps) { return <IconBase {...p}><circle cx="9" cy="8" r="4"/><path d="M2 20a7 7 0 0 1 14 0M16 5a4 4 0 0 1 0 7M17 13a5 5 0 0 1 5 5"/></IconBase>; }

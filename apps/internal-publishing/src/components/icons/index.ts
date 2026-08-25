@@ -1,0 +1,10 @@
+export { HomeSimpleDoorIcon } from "./home-simple-door";
+export { PageEditIcon } from "./page-edit";
+export { BookIcon } from "./book";
+export { FolderIcon } from "./folder";
+export { CheckIcon } from "./check";
+export { ArrowLeftIcon } from "./arrow-left";
+export { ArrowRightIcon } from "./arrow-right";
+export { RefreshDoubleIcon } from "./refresh-double";
+export { MenuIcon } from "./menu";
+export { CalendarIcon } from "./calendar";

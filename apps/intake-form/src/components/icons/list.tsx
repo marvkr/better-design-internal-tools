@@ -1,0 +1,1 @@
+import type { IconProps } from "./shared"; import { IconBase } from "./shared"; export function ListIcon(p: IconProps) { return <IconBase {...p}><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></IconBase>; }

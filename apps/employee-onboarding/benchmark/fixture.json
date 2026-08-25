@@ -1,0 +1,91 @@
+{
+  "slug": "employee-onboarding",
+  "name": "Employee onboarding",
+  "product": "Welcome",
+  "category": "People operations",
+  "audience": "People and hiring teams",
+  "job": "Collect a new employee's details and prepare their first-week setup.",
+  "nav": [
+    "People",
+    "Onboarding",
+    "Time off",
+    "Documents"
+  ],
+  "activeNav": "Onboarding",
+  "stats": [
+    {
+      "label": "Starting soon",
+      "value": "6"
+    },
+    {
+      "label": "Needs action",
+      "value": "4"
+    },
+    {
+      "label": "Complete",
+      "value": "18"
+    }
+  ],
+  "records": [
+    {
+      "title": "Jamie Park",
+      "detail": "Product Designer",
+      "meta": "Starts 2 Sep",
+      "status": "Needs documents"
+    },
+    {
+      "title": "Morgan Lee",
+      "detail": "Staff Engineer",
+      "meta": "Starts 26 Aug",
+      "status": "Ready"
+    },
+    {
+      "title": "Taylor Reed",
+      "detail": "Account Executive",
+      "meta": "Started 12 Aug",
+      "status": "Complete"
+    }
+  ],
+  "fields": [
+    {
+      "label": "Full name",
+      "placeholder": "Jamie Park"
+    },
+    {
+      "label": "Work email",
+      "placeholder": "jamie@company.com",
+      "type": "email"
+    },
+    {
+      "label": "Role",
+      "placeholder": "Product Designer"
+    },
+    {
+      "label": "Start date",
+      "placeholder": "Choose a date",
+      "type": "date"
+    }
+  ],
+  "steps": [
+    {
+      "title": "Onboarding",
+      "description": "See who is starting soon and what still needs attention.",
+      "action": "Add employee"
+    },
+    {
+      "title": "Employee details",
+      "description": "Record the new hire's role, manager, and start date.",
+      "action": "Set up onboarding"
+    },
+    {
+      "title": "Review first week",
+      "description": "Confirm documents, equipment, and orientation tasks.",
+      "action": "Start onboarding"
+    },
+    {
+      "title": "Onboarding started",
+      "description": "Jamie and every task owner received their next steps.",
+      "action": "View checklist"
+    }
+  ]
+}

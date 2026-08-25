@@ -1,0 +1,13 @@
+{
+  "host": "codex",
+  "cliVersion": "0.149.0",
+  "model": "gpt-5.6-luna",
+  "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+  "history": "ephemeral",
+  "outputFormat": "jsonl",
+  "timeBudgetSeconds": 3600,
+  "mcp": {
+    "control": "none, enforced with --ignore-user-config and Apps/plugins disabled",
+    "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled"
+  }
+}

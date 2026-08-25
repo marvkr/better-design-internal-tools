@@ -1,0 +1,10 @@
+{
+  "generatedProjectId":"49aa984c-0715-4bd5-8dfb-ade16671a13d",
+  "assignmentSource":"generated design-system registry meta.iconLibrary",
+  "library":"Phosphor",
+  "provider":"Iconify",
+  "variant":"duotone",
+  "installedIconNames":["arrow-left-duotone","arrow-right-duotone","calendar-duotone","chart-bar-duotone","check-duotone","clock-duotone","note-duotone","users-duotone","warning-circle-duotone","x-duotone"],
+  "manifestFile":"src/components/icons/.library.json",
+  "componentFiles":["src/components/icons/index.tsx"]
+}

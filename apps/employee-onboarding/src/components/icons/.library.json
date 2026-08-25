@@ -1,0 +1,7 @@
+{
+  "library": "ph",
+  "prefix": "ph",
+  "source": "iconify",
+  "variant": "duotone",
+  "icons": ["arrow-left-duotone", "arrow-right-duotone", "calendar-duotone", "check-circle-duotone", "file-text-duotone", "house-duotone", "note-duotone", "users-duotone"]
+}

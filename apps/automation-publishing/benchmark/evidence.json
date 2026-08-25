@@ -1,0 +1,73 @@
+{
+  "receipt": "automation-publishing",
+  "actualAgentSessionSettings": {
+    "host": "codex",
+    "cliVersion": "0.149.0",
+    "model": "gpt-5.6-luna",
+    "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+    "history": "ephemeral",
+    "outputFormat": "jsonl",
+    "timeBudgetSeconds": 3600,
+    "mcp": { "control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled" }
+  },
+  "agentSessionSettings": {
+    "host": "codex",
+    "cliVersion": "0.149.0",
+    "model": "gpt-5.6-luna",
+    "permissionMode": "dangerously-bypass-approvals-and-sandbox",
+    "history": "ephemeral",
+    "outputFormat": "jsonl",
+    "timeBudgetSeconds": 3600,
+    "mcp": { "control": "none, enforced with --ignore-user-config and Apps/plugins disabled", "treatment": "better-design HTTP MCP only, enforced with --ignore-user-config and Apps/plugins disabled" }
+  },
+  "betterDesignMcpOperationsInOrder": [
+    "get-ui-principle",
+    "get-ux-principle",
+    "find-design-system",
+    "create-design-system",
+    "get-design-system-status (generating)",
+    "get-design-system-status (completed)",
+    "install generated registry",
+    "read generated meta.iconLibrary",
+    "install assigned Iconoir icons",
+    "get-review-rules",
+    "check-comprehension",
+    "inspect-spacing (capture script, no states)",
+    "inspect-spacing (states unavailable; not completed)"
+  ],
+  "localCommands": [
+    { "command": "npx shadcn@latest add https://better-design.com/api/projects/1571c16d-2af1-42c2-92e1-74587e00440e/registry/all.json", "outcome": "prompted for confirmation; not completed" },
+    { "command": "npx shadcn@latest add https://better-design.com/api/projects/1571c16d-2af1-42c2-92e1-74587e00440e/registry/all.json --yes --overwrite", "outcome": "passed; generated registry installed" },
+    { "command": "bun run typecheck", "outcome": "passed" },
+    { "command": "bun run lint", "outcome": "passed with one existing generated guardrail warning" },
+    { "command": "bun test", "outcome": "passed; 1 test" },
+    { "command": "bun run build", "outcome": "passed; production build completed" },
+    { "command": "git restore --source=HEAD -- package.json bun.lock", "outcome": "restored package manifests after registry install changed dependency declarations; benchmark package versions unchanged" },
+    { "command": "bun run typecheck && bun run lint && bun test && bun run build && test -z \"$(rg -n 'lucide-react' src || true)\"", "outcome": "passed; typecheck, lint, test, build, and no-Lucide-import check" },
+    { "command": "rg -n 'lucide-react|Lucide' src || true", "outcome": "passed; no Lucide imports or references in src" },
+    { "command": "jq receipt-schema checks for benchmark/design-system.lock.json, benchmark/icons.lock.json, and benchmark/evidence.json", "outcome": "passed; all required stable receipt fields present and model is gpt-5.6-luna" }
+  ],
+  "commands": [],
+  "filesChanged": [
+    "components.json",
+    "eslint.config.mjs",
+    "tsconfig.json",
+    "src/app/globals.css",
+    "src/app/layout.tsx",
+    "src/app/page.tsx",
+    "src/components/icons/*",
+    "src/components/ui/* generated registry files",
+    "src/.better-design/*",
+    "src/lib/* generated design-system files",
+    "benchmark/design-system.lock.json",
+    "benchmark/icons.lock.json",
+    "benchmark/evidence.json",
+    "benchmark/workflow.test.ts",
+    "src/components/icons/compat.tsx"
+  ],
+  "toolLimitations": [
+    "Better Design MCP tools were not exposed in this continuation session; prior-run MCP receipts are retained, but no new MCP operation is claimed here.",
+    "Connected Chrome/browser integration was unavailable, so real-browser end-to-end control verification was not run.",
+    "The existing benchmark/spacing-states.json was retained as prior-run data, but it contains a 375px capture rather than the required 390px state. Because the connected Chrome integration was unavailable, the required no-state call and the second inspect-spacing call with exact captured states could not be completed; no spacing result is claimed."
+  ]
+}
